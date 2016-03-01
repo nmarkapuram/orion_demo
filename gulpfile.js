@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
-    minifyCSS = require('gulp-minify-css'),
+    minifyCSS = require('gulp-clean-css'),
     ngAnnotate = require('gulp-ng-annotate'),
     connect = require('gulp-connect-multi'),
     runSequence = require('run-sequence'),
@@ -39,10 +39,6 @@ gulp.task('js', function () {
 
 gulp.task('styles', function () {
   return gulp.src(cssFiles)
-    .pipe(sass({
-      sourceMap: 'sass',
-      outputStyle: 'compressed'
-    }))
     .pipe(autoprefixer({browsers: [
                         '> 1%',
                         'last 2 versions',
@@ -53,9 +49,9 @@ gulp.task('styles', function () {
                         'IE 9',
                         'IE 10',
                         'IE 11'
-                    ],cascade: false}))
+                    ],cascade: false}))                   
     .pipe(concat('estimator.css'))
-    .pipe(minifyCSS())
+    .pipe(minifyCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(cssDest))
     .pipe(devServer.reload());
 });
