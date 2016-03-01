@@ -1,0 +1,21 @@
+<!--Folder Tree component code -->
+
+
+<div ng-controller="folderTreeController">
+
+	<div style="float:left; width:49.5%">
+		<div vmf-folder-tree tree="folderStructure.folderContents" root-name="rootName1" ajax="true" multiple-select="on">
+		  <!-- 
+		  		If above directory has data-multiple-select attribute with any of "off","OFF","Off","false" as its value checkbox will not be visible ex:  data-multiple-select="off"
+			   
+			   	Also has a call back function provided on clicking a folder attribute - data-folder-click-call-back="test(someObject)"
+		  -->
+		</div>
+	</div>
+
+	<div style="float:left; width:50%">
+		<div vmf-folder-tree tree="folderStructure2.folderContent" root-name="rootName2" multiple-select="on">
+		    <!-- If above directory has data-multiple-select attribute with any of "off","OFF","Off","false" as its value checkbox will not be visible ex:  data-multiple-select="off" -->
+		</div>
+	</div>
+</div>

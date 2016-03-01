@@ -1,0 +1,9 @@
+/**
+	Order of css files
+	
+	jquery.fileupload-bootstrap.css
+	jquery.fileupload.css
+	
+	jquery.fileupload-ui.css
+
+*/

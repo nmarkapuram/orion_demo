@@ -1,0 +1,457 @@
+{
+    "productFamily": [
+        {
+            "code": "HORIZON",
+            "name": "Horizon",
+            "productLine": [
+                {
+                    "code": "HORIZON",
+                    "name": "Horizon",
+                    "productDetails": [
+                        {
+                            "licSKU": "ZZ-LXC-100-C",
+                            "licInvItemID": "1293218",
+                            "licSKUUnitCost": 1500,
+                            "licSKUDesc": "VMware Horizon for Linux: 100 Pack (CCU)",
+                            "upgradeFlag": true,
+                            "snsSKU": "HZ-LXC-100-P-SSS-C",
+                            "snsInvItemID": "1293116",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon for Linux: 100 Pack (CCU) - 1 year",
+                            "snsSKUCost": 3750,                     
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": true
+                        },
+                        {
+                            "licSKU": "HZ-LXC-10-C",
+                            "licInvItemID": "1293188",
+                            "licSKUUnitCost": 150,
+                            "licSKUDesc": "VMware Horizon for Linux: 10 Pack (CCU)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-LXC-10-P-SSS-C",
+                            "snsInvItemID": "1293150",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon for Linux: 10 Pack (CCU) - 1 year",
+                            "snsSKUCost": 375,                       
+                            "isTerm": true,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        }
+                    ]
+                },
+                {
+                    "code": "STANDARD",
+                    "name": null,
+                    "productDetails": [
+                        {
+                            "licSKU": "HZ-STD-100-C",
+                            "licInvItemID": "1021576",
+                            "licSKUUnitCost": 25000,
+                            "licSKUDesc": "VMware Horizon View Standard Edition: 100 Pack (CCU)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-STD-100-P-SSS-C",
+                            "snsInvItemID": "1021114",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon View Standard Edition: 100 Pack (CCU) for 1 year",
+                            "snsSKUCost": 6250,
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "PHZ-STD-10-C",
+                            "licInvItemID": "1021676",
+                            "licSKUUnitCost": 2500,
+                            "licSKUDesc": "VMware Horizon View Standard Edition: 10 Pack (CCU)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-STD-10-P-SSS-C",
+                            "snsInvItemID": "1021373",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon View Standard Edition: 10 Pack (CCU) for 1 year",
+                            "snsSKUCost": 625,
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-STD-A100-C",
+                            "licInvItemID": "1021170",
+                            "licSKUUnitCost": 19000,
+                            "licSKUDesc": "VMware Horizon View Standard Add-On: 100 Pack (CCU)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-STD-A100-P-SSS-C",
+                            "snsInvItemID": "1021579",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon View Standard Add-On: 100 Pack (CCU) for 1 year",
+                            "snsSKUCost": 4750,
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-STD-A10-C",
+                            "licInvItemID": "1021123",
+                            "licSKUUnitCost": 1900,
+                            "licSKUDesc": "VMware Horizon View Standard Add-On: 10 Pack (CCU)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-STD-A10-P-SSS-C",
+                            "snsInvItemID": "1021157",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon View Standard Add-On: 10 Pack (CCU) for 1 year",
+                            "snsSKUCost": 475,
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        }
+                    ]
+                },
+                {
+                    "code": "DAAS",
+                    "name": null,
+                    "productDetails": [
+                        {
+                            "licSKU": "HZ-DS-100-C",
+                            "licInvItemID": "1092110",
+                            "licSKUUnitCost": 27500,
+                            "licSKUDesc": "VMware Horizon DaaS On Premise Platform: 100-Pack",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-DS-100-P-SSS-C",
+                            "snsInvItemID": "1092104",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon DaaS On Premise Platform: 100-Pack for 1 year",
+                            "snsSKUCost": 6875,        
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        }
+                    ]
+                },
+                {
+                    "code": "ADVANCED",
+                    "name": null,
+                    "productDetails": [
+                        {
+                            "licSKU": "HZ-ADVN-10-C",
+                            "licInvItemID": "999180",
+                            "licSKUUnitCost": 2500,
+                            "licSKUDesc": "VMware Horizon Advanced Edition: 10 Pack (Named Users)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-ADVN-10-P-SSS-C",
+                            "snsInvItemID": "999253",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Advanced Edition: 10 Pack (Named Users) for 1 year",
+                            "snsSKUCost": 625,                         
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-ADVN-100-C",
+                            "licInvItemID": "999173",
+                            "licSKUUnitCost": 25000,
+                            "licSKUDesc": "VMware Horizon Advanced Edition: 100 Pack (Named Users)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-ADVN-100-P-SSS-C",
+                            "snsInvItemID": "1000052",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Advanced Edition: 100 Pack (Named Users) for 1 year",
+                            "snsSKUCost": 6250,                       
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-ADVC-100-C",
+                            "licInvItemID": "999783",
+                            "licSKUUnitCost": 40000,
+                            "licSKUDesc": "VMware Horizon Advanced Edition: 100 Pack (CCU)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-ADVC-100-P-SSS-C",
+                            "snsInvItemID": "999146",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Advanced Edition: 100 Pack (CCU) for 1 year",
+                            "snsSKUCost": 10000,                        
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-ADVC-10-C",
+                            "licInvItemID": "999615",
+                            "licSKUUnitCost": 4000,
+                            "licSKUDesc": "VMware Horizon Advanced Edition: 10 Pack (CCU)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-ADVC-10-P-SSS-C",
+                            "snsInvItemID": "999354",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Advanced Edition: 10 Pack (CCU) for 1 year",
+                            "snsSKUCost": 1000,                      
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        }
+                    ]
+                },
+                {
+                    "code": "ENTERPRISE",
+                    "name": "ENTERPRISE",
+                    "productDetails": [
+                        {
+                            "licSKU": "HZ-ENTN-100-C",
+                            "licInvItemID": "999240",
+                            "licSKUUnitCost": 30000,
+                            "licSKUDesc": "VMware Horizon Enterprise Edition: 100 Pack (Named Users)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-ENTN-100-P-SSS-C",
+                            "snsInvItemID": "999575",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Enterprise Edition: 100 Pack (Named Users) for 1 year",
+                            "snsSKUCost": 7500,                          
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-ENTC-100-C",
+                            "licInvItemID": "999323",
+                            "licSKUUnitCost": 50000,
+                            "licSKUDesc": "VMware Horizon Enterprise Edition: 100 Pack (CCU)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-ENTC-100-P-SSS-C",
+                            "snsInvItemID": "999876",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Enterprise Edition: 100 Pack (CCU) for 1 year",
+                            "snsSKUCost": 12500,                           
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-ENTN-10-C",
+                            "licInvItemID": "999538",
+                            "licSKUUnitCost": 3000,
+                            "licSKUDesc": "VMware Horizon Enterprise Edition: 10 Pack (Named Users)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-ENTN-10-P-SSS-C",
+                            "snsInvItemID": "999795",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Enterprise Edition: 10 Pack (Named Users) for 1 year",
+                            "snsSKUCost": 750,                  
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-ENTC-10-C",
+                            "licInvItemID": "1000016",
+                            "licSKUUnitCost": 5000,
+                            "licSKUDesc": "VMware Horizon Enterprise Edition: 10 Pack (CCU)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-ENTC-10-P-SSS-C",
+                            "snsInvItemID": "999971",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Enterprise Edition: 10 Pack (CCU) for 1 year",
+                            "snsSKUCost": 1250,     
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        }
+                    ]
+                },
+                {
+                    "code": "FLEX",
+                    "name": "VMware Horizon FLEX",
+                    "productDetails": [
+                        {
+                            "licSKU": "HZ-FUS56-FLX-UG-C",
+                            "licInvItemID": "1120135",
+                            "licSKUUnitCost": 180,
+                            "licSKUDesc": "Upgrade: VMware Fusion 6 Professional or Fusion 5 Professional to Horizon FLEX per Device",
+                            "upgradeFlag": true,
+                            "snsSKU": "HZ-FLX-1-P-SSS-C",
+                            "snsInvItemID": "1120129",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon FLEX 1 pack (Per Device) for 1 year",
+                            "snsSKUCost": 63,                         
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-FLX-10-C",
+                            "licInvItemID": "1120115",
+                            "licSKUUnitCost": 2500,
+                            "licSKUDesc": "VMware Horizon FLEX 10 pack (Per Device)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-FLX-10-P-SSS-C",
+                            "snsInvItemID": "1120117",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon FLEX 10 pack (Per Device) for 1 year",
+                            "snsSKUCost": 625,                        
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-FUSPL7-FLX-UG-C",
+                            "licInvItemID": "1120136",
+                            "licSKUUnitCost": 100,
+                            "licSKUDesc": "Upgrade: VMware Fusion 7 Pro or Player 7 Pro to Horizon FLEX per Device",
+                            "upgradeFlag": true,
+                            "snsSKU": "HZ-FLX-1-P-SSS-C",
+                            "snsInvItemID": "1120129",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon FLEX 1 pack (Per Device) for 1 year",
+                            "snsSKUCost": 63,                          
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "code": "NSX",
+            "name": "VMware NSX",
+            "productLine": [
+                {
+                    "code": "VSPHERE",
+                    "name": null,
+                    "productDetails": [
+                        {
+                            "licSKU": "NX-VS-100VM-C",
+                            "licInvItemID": "1271155",
+                            "licSKUUnitCost": 12500,
+                            "licSKUDesc": "VMware NSX for vSphere: Horizon edition (100 VM Pack)",
+                            "upgradeFlag": false,
+                            "snsSKU": "NX-VS-100VM-P-SSS-C",
+                            "snsInvItemID": "1271124",
+                            "snsSKUDesc": "Production Support/Subscription for VMware NSX for vSphere: Horizon edition (100 VM Pack) for 1 Year",
+                            "snsSKUCost": 3125,                         
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "code": "VREALIZE",
+            "name": "VMware vRealize",
+            "productLine": [
+                {
+                    "code": "OPS",
+                    "name": "VMware vCenter Operations Standard",
+                    "productDetails": [
+                        {
+                            "licSKU": "VR6-VU10-C",
+                            "licInvItemID": "1149214",
+                            "licSKUUnitCost": 750,
+                            "licSKUDesc": "VMware vRealize Operations for Horizon: 10 Concurrent User Pack",
+                            "upgradeFlag": false,
+                            "snsSKU": "VR6-VU10-P-SSS-C",
+                            "snsInvItemID": "1149105",
+                            "snsSKUDesc": "Production Support/Subscription VMware vRealize Operations for Horizon: 10 Concurrent User Pack for 1 year",
+                            "snsSKUCost": 188,                           
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "VR6-VU100-C",
+                            "licInvItemID": "1149138",
+                            "licSKUUnitCost": 7500,
+                            "licSKUDesc": "VMware vRealize Operations for Horizon: 100 Concurrent User Pack",
+                            "upgradeFlag": false,
+                            "snsSKU": "VR6-VU100-P-SSS-C",
+                            "snsInvItemID": "1149203",
+                            "snsSKUDesc": "Production Support/Subscription VMware vRealize Operations for Horizon: 100 Concurrent User Pack for 1 year",
+                            "snsSKUCost": 1875,                   
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "code": "HAM",
+            "name": null,
+            "productLine": [
+                {
+                    "code": "HAM",
+                    "name": null,
+                    "productDetails": [
+                        {
+                            "licSKU": "HZ-APMN-10-C",
+                            "licInvItemID": "1261265",
+                            "licSKUUnitCost": 1200,
+                            "licSKUDesc": "Vmware Horizon Application Management Bundle: 10 Pack (Named Users)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-APMN-10-P-SSS-C",
+                            "snsInvItemID": "1261134",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Application Management Bundle: 10 Pack (Named Users)for 1 year",
+                            "snsSKUCost": 300,                           
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-APMC-10-C",
+                            "licInvItemID": "1261211",
+                            "licSKUUnitCost": 1800,
+                            "licSKUDesc": "Vmware Horizon Application Management Bundle: 10 Pack (CCU)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-APMC-10-P-SSS-C",
+                            "snsInvItemID": "1261191",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Application Management Bundle: 10 Pack (CCU)for 1 year",
+                            "snsSKUCost": 450,                    
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-APMN-100-C",
+                            "licInvItemID": "1261232",
+                            "licSKUUnitCost": 12000,
+                            "licSKUDesc": "Vmware Horizon Application Management Bundle: 100 Pack (Named Users)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-APMN-100-P-SSS-C",
+                            "snsInvItemID": "1261154",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Application Management Bundle: 100 Pack (Named Users)for 1 year",
+                            "snsSKUCost": 3000,                         
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        },
+                        {
+                            "licSKU": "HZ-APMC-100-C",
+                            "licInvItemID": "1261143",
+                            "licSKUUnitCost": 18000,
+                            "licSKUDesc": "Vmware Horizon Application Management Bundle: 100 Pack (CCU)",
+                            "upgradeFlag": false,
+                            "snsSKU": "HZ-APMC-100-P-SSS-C",
+                            "snsInvItemID": "1261193",
+                            "snsSKUDesc": "Production Support/Subscription for VMware Horizon Application Management Bundle: 100 Pack (CCU)for 1 year",
+                            "snsSKUCost": 4500,                      
+                            "isTerm": false,
+                            "licDEKicker": 100,
+                            "snsDEKicker": 100,
+                            "isBundle": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

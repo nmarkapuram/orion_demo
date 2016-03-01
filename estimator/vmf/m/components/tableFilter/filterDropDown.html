@@ -1,0 +1,52 @@
+<div ng-controller="filterDropdownCtrl">
+	<div class="btn-group dropdown table-filter keepopen">
+		<button type="button" class="btn btn-default dropdown-toggle custom" data-toggle="dropdown" ng-click="placeholderFix($event)" ng-disabled="disabled" ng-class="{'error': !valid()}">
+			<span class="title">{{globalVars.filtersTitle}}</span>
+		</button>
+		<div class="dropdown-menu">
+			<ul class="filterDropDown">
+				<li>
+					<span ng-bind-html="actLic">
+						<!--To find deactivated keys, go to the <a target="_blank" href="/group/vmware/support-contract-history">Activities Log</a> or <a target="_blank" ng-href="{{licenseTrackerUrl}}">License Tool Tracker</a> -->
+					</span>
+				</li>
+				<li>
+					<input type="text" ng-model="filterNotes" placeholder="{{globalVars.enterNotes}}" class="filterNotes" />
+				</li>
+				<li class="orderContractSelectContainer">
+					<div vmf-select-list dtitle="" list="filterActionsList" sortby="false" model="filterSelectedValue" class="filterActionsList" pre-select-ind="0" customeventname="filterActionListChanged"></div>
+					<div class="seprator"></div>
+					
+					<div vmf-select-list dtitle="" id="orderDateSelected" list="orderDateList" sortby="false" ng-show="isByOrderFilterSelected" model="DateSelectedValue" defaulttext="{{globalVars.filterTextOrderDate}}" customeventname="orderDateListChanged"></div>
+					<div vmf-select-list dtitle="" id="contractDateSelected" list="contractDateList" sortby="false" ng-show="!isByOrderFilterSelected" model="DateSelectedValue" defaulttext="{{globalVars.filterTextContractEndDate}}" customeventname="contractDateListChanged"></div>
+					
+					<div vmf-calendar class="vmf-calendar-drop" calendar-input-id="orderCalendarId" model="selectedDate" historic="historic" startyear="startyear" endyear="endyear" customeventname="onOrderCalendarSelection" ng-click="calendarIconClick($event)" ng-show="isByOrderFilterSelected" resetCalendar="false"></div>
+					<div vmf-calendar class="vmf-calendar-drop" calendar-input-id="contractCalendarId" model="selectedDate" historic="historic" startyear="startyear" endyear="endyear" customeventname="onContractCalendarSelection" ng-show="!isByOrderFilterSelected" resetCalendar="false"></div>
+					<div class="seprator"></div>
+					
+					<input type="text" ng-model="orderNumber" placeholder="{{globalVars.orderNumber}}" class="orderNumberValue" ng-show="isByOrderFilterSelected" />
+					<input type="text" ng-model="contractNumber" placeholder="{{globalVars.contactNumber}}" class="contractNumberValue" ng-show="!isByOrderFilterSelected" />
+				</li>
+				<li ng-if="emptyDataErr"><p class="errorTextStyle emptyDataError" >{{errMsg}}</p></li>
+				<li class="labelFilterContainer">
+					
+				</li>
+				<li ng-if="licenseErrMsg"><p class="errorTextStyle emptyDataError" >{{licenseErrMsg}}</p></li>
+			</ul>
+			<div  role="presentation" class="dropdown-actions clearfix">
+				<a class="btn btn-link btn-xs pull-left" ng-click="clearAll($event)" href="javascript:void(0)"> {{globalVars.clearAll}}</a>
+				<a class="btn btn-link btn-xs pull-right" ng-click="applyFilter($event)" href="javascript:void(0)">{{globalVars.applyTxt}}</a>
+			</div>
+		</div>
+	</div>
+	<div ng-show="appliedFilterList != null && appliedFilterList != ''" class="selectedFiltersWrap">
+		<ul>
+			<li ng-repeat="(key, value) in appliedFilterList" ng-class="{'hidden extraLabels': $index>2}">
+				<a ng-click="deleteAppliedFilter(key)" class="deleteIcon"></a><span>{{key}} : {{value}}</span>
+			</li>
+			<li ng-class="{hidden: appliedFilterListLength<4 }">
+				<a class="filterLabelsMoreLink" ng-click="showMoreLabels({$event: $event})" href="javascript:;">{{ globalVars.more }}</a>
+			</li>
+		</ul>
+	</div>
+</div>

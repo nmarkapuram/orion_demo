@@ -1,0 +1,83 @@
+<section tabindex="-1" role="dialog" aria-labelledby="oranSearchResultsModal" aria-hidden="true" class="overlay" id="oranSearchResultsModal">
+    <div class="modal-header">
+        <div class = "row">  
+        <div class="col-md-11">
+            <h3 class="modal-title ng-binding">{{globalVars.oranSearchResultsHeader}}</h3>
+        </div>
+        <div class="col-md-1">
+            <span class="close" data-dismiss="modal" aria-hidden="true" ng-click="modalClose('oran-search-results')"></span>
+        </div>
+        </div>
+    </div>
+    <div class="modal-body clearfix">
+        <div class="row" ng-if="oranSearchResultsErrorMessage != null">
+           <div class="alert-box col-md-12 margin-top-10">
+                <div class="alert alert-danger alert-dismissable" role="alert">
+                    <span class="close icons-alert-close" data-dismiss="alert" aria-hidden="true"></span>
+                    <div class="row">
+                        <span class="icons-alert-info"></span>
+                        <div class="alert-text col-sm-10">
+                            <p>{{oranSearchResultsErrorMessage}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+              <input type="text" maxlength="" class="form-control text-left margin-top-15">  
+            </div>
+            <div class="col-md-8 padding-left-0">
+               <div class="alert-box starlight-alert" role="alert">
+                    <div class="alert alert-info alert-dismissable">
+                        <div class="row">
+                            <span class="icons-alert-info"></span>
+                            <div class="alert-text col-sm-11">
+                                <span>{{globalVars.oranSearchResultsAlert}}</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="oranSearchResultsTable">
+                <div ng-controller="orionSearchResultsTableController as dCtrl">
+                    <table datatable="ng" dt-options="dCtrl.dtOptions" dt-column-defs="" class="ellipsisTable starlight dataTable">
+                        <thead>
+                            <tr>
+                                <th width="5%">&nbsp;</th>
+                                <th width="15%">{{globalVars.oran}}</th>
+                                <th width="20%">{{globalVars.companyName}}</th>
+                                <th width="15%">{{globalVars.registrationStatus}}</th>
+                                <th width="15%">{{globalVars.registrationDate}}</th>
+                                <th width="15%">{{globalVars.expirationDate}}</th>
+                                <th width="15%">{{globalVars.benefitsEligibilty}}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         <tr ng-repeat="oran in oranSearchDetails.oranDetails">
+                            <td width="5%" style="padding-left:9px !important">
+                                 <div class="radio">
+                                    <input type="radio" id="{{oran.oranNumber}}" name="radioSelectOran">
+                                    <label for="{{oran.oranNumber}}"></label>
+                                  </div>
+                            </td>
+                            <td width="15%" title="{{oran.oranNumber}}">{{oran.oranNumber}} </td>
+                            <td width="20%" title="{{oran.companyName}}">{{oran.companyName}}</td>
+                            <td width="15%" title="{{oran.registrationStatus}}">{{oran.registrationStatus}}</td>
+                            <td class="text-right" width="15%" title="{{oran.registrationDate}}">{{oran.registrationDate}}</td>
+                            <td class="text-right" width="15%" title="{{oran.expiratiopnDate}}">{{oran.expiratiopnDate}}</td>
+                            <td class="text-right" width="15%" title="{{oran.benefitsEligibility}}">{{oran.benefitsEligibility}}</td>
+                         </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content End -->
+    <div class="modal-footer clearfix">
+        <a href="javascript:void(0);" class="btn btn-primary margin-right-0" ng-click="close('oran-search-results')">Cancel</a>
+    </div>
+</section>

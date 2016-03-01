@@ -1,0 +1,44 @@
+ .modal-dialog {
+     width: 590px;
+     margin: 7.5% auto;
+     .modal-content {
+         margin: 0px;
+     }
+     .modal-body {
+         height: 278px;
+     }
+     .modal-header {
+         .modal-title {
+             line-height: 14px;
+             padding: 27px 15px 25px 39px;
+         }
+     }
+ }
+ .modal-dialog.lg {
+     width: 770px;
+     .modal-header {
+         .modal-title {
+             line-height: 15px;
+             font-size: 22px;
+             padding: 30px 15px 20px 39px;
+         }
+     }
+ }
+ .vmf-modallarge {
+     width: 800px;
+ }
+ .modal-footer {
+     .vmf-btn {
+         margin: 0px;
+         display: inline-block;
+         float: none;
+         width: auto;
+         margin-left: 20px;
+     }
+     .vmf-back-btn {
+         margin-left: 0;
+     }
+ }
+.modal-open {
+    padding-right: 17px;
+}

@@ -1,0 +1,62 @@
+
+vmf-tabs .tab-content, vmf-tabsone .tab-content, vmf-tabstwo .tab-content{
+   padding:16px 0px;
+}
+
+vmf-tabstwo .vmfTab2 span{
+    float: left; 
+    vertical-align:top; 
+    font-weight:bold;
+}
+
+vmf-tabstwo .nav li{
+  border:1px solid #ccc;
+} 
+.vmfTab2 {
+     .tab_head_txt {
+        font-family:$font-stackSemiBold;
+        font-size: 22px; 
+        color: #333; 
+        padding:0 15px 0 15px;
+        *line-height:22px;
+        margin-top:14px; 
+    } 
+
+}
+ 
+vmf-tabsone ul, vmf-tabsone ul li a{ 
+    margin-bottom:0px; 
+    line-height:10px;
+}
+
+.tab-pane{
+  padding: 16px 0px;
+}
+vmf-tabsone .tab-content, vmf-tabstwo .tab-content{
+ 	padding:0px;
+}
+vmf-tabs .vmfTab li a{
+	height:auto;
+}
+
+.collapse {
+    display: block;
+    visibility: visible;
+}
+.collapse.in {
+    display: block;
+    visibility: visible;
+}
+
+.vmfTab  .navbar-header {
+         display: none;   
+    }
+    .navbar-collapse {
+        border-top:0;
+        padding-top:0;
+        padding-bottom: 0;
+    }
+    .vmfTab  ul li, .vmfTab ul,.vmfTab  ul li a{
+        float:left;
+        width:auto;
+    }

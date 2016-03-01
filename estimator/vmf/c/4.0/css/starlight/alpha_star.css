@@ -1,0 +1,874 @@
+/* over-writing normalise bootstrap styles */
+/* line 2, stdin */
+html {
+  font-family: "proxima-nova-regular"; }
+
+/* line 6, stdin */
+nav ul {
+  list-style: none; }
+
+/* line 10, stdin */
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+/* line 19, stdin */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+/* line 26, stdin */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+/* line 33, stdin */
+del {
+  text-decoration: line-through; }
+
+/* line 37, stdin */
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+/* change border colour to suit your needs */
+/* line 44, stdin */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/* line 53, stdin */
+input, select {
+  vertical-align: middle; }
+
+/* line 57, stdin */
+ol, ul {
+  list-style: none; }
+
+/* line 62, stdin */
+ul ul {
+  list-style: none; }
+
+/* line 69, stdin */
+body.liferay.starlight .header {
+  height: auto; }
+  /* line 72, stdin */
+  body.liferay.starlight .header #breadcrumb {
+    height: 25px; }
+  /* line 75, stdin */
+  body.liferay.starlight .header .page-logo-my {
+    background-image: url("/vmf/c/4.0/images/starlight/logo_myvmware.png");
+    background-repeat: no-repeat;
+    height: 39px;
+    margin: 25px 0 0;
+    width: 185px; }
+  /* line 82, stdin */
+  body.liferay.starlight .header .nav-menu {
+    float: right;
+    font-family: "proxima-nova-thin","Arial",sans-serif;
+    margin: 12px -10px 5px 0;
+    position: relative;
+    z-index: 3; }
+    /* line 90, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 li:hover > ul {
+      display: block; }
+    /* line 94, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 > li {
+      margin: 0; }
+      /* line 96, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 > li > ul {
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+        width: 255px; }
+      /* line 103, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 > li a.menu-item-primary-1 {
+        padding: 10px 12px 15px;
+        font-size: 18px; }
+    /* line 111, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 li:last-child ul.nav-level-2 {
+      left: auto; }
+      /* line 113, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 li:last-child ul.nav-level-2 ul {
+        left: -240px;
+        position: absolute;
+        width: 245px; }
+      /* line 120, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 li:last-child ul.nav-level-2 li.show_drop_l2:after {
+        content: " ";
+        color: #006990;
+        right: 15px;
+        position: absolute; }
+      /* line 126, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 li:last-child ul.nav-level-2 li.show_drop_l2:before {
+        content: "<<";
+        color: #006990;
+        left: 8px;
+        position: absolute; }
+    /* line 137, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 li:nth-last-child(2) ul.nav-level-2 {
+      left: auto; }
+      /* line 139, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 li:nth-last-child(2) ul.nav-level-2 ul {
+        left: -240px;
+        position: absolute;
+        width: 245px; }
+      /* line 146, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 li:nth-last-child(2) ul.nav-level-2 li.show_drop_l2:after {
+        content: " ";
+        color: #006990;
+        right: 15px;
+        position: absolute; }
+      /* line 152, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 li:nth-last-child(2) ul.nav-level-2 li.show_drop_l2:before {
+        content: "<<";
+        color: #006990;
+        left: 8px;
+        position: absolute; }
+    /* line 165, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 li ul.nav-level-2 li:hover > ul {
+      display: block; }
+    /* line 174, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 ul.nav-level-2 > li {
+      padding: 0 0 5px 10px;
+      width: 100%;
+      position: relative;
+      left: 0;
+      margin: 0;
+      font-family: proxima-nova-regular; }
+      /* line 182, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 ul.nav-level-2 > li a {
+        font-size: 14px;
+        color: #006990; }
+      /* line 186, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 ul.nav-level-2 > li a:hover {
+        color: #FFF;
+        background-color: transparent; }
+      /* line 191, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 ul.nav-level-2 > li > ul > li {
+        padding-left: 30px;
+        margin-bottom: 5px; }
+      /* line 197, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 ul.nav-level-2 > li:hover > ul {
+        top: -10px; }
+      /* line 203, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 ul.nav-level-2 > li.show_drop_l2:after {
+        content: ">>";
+        color: #006990;
+        right: 15px;
+        position: absolute; }
+    /* line 210, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 ul.nav-level-2 ul {
+      display: none;
+      list-style: none;
+      position: absolute;
+      left: 258px;
+      top: -12px;
+      background-color: #f1f1f1;
+      border-top: 4px solid #666;
+      box-shadow: 0 8px 8px 2px rgba(0, 0, 0, 0.5);
+      display: none;
+      list-style-type: none;
+      min-width: 245px;
+      padding: 10px 0px 0px 0px;
+      position: absolute;
+      right: 0;
+      width: auto;
+      z-index: 100;
+      padding-bottom: 8px; }
+    /* line 229, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 ul.nav-level-2 .ul_heading {
+      background: url("/files/images/framework/arrow-heading-link.png") no-repeat scroll right center transparent;
+      color: #006990;
+      display: none;
+      font-size: 22px;
+      font-weight: normal;
+      margin: 0 0 10px 30px;
+      padding-right: 20px !important;
+      max-width: 80%;
+      line-height: 1;
+      font-family: proxima-nova-regular; }
+  /* line 247, stdin */
+  body.liferay.starlight .header .dropdown-menu > li > a {
+    display: inline;
+    padding-top: 0;
+    padding-bottom: 0; }
+
+/* line 258, stdin */
+body.liferay.starlight .page-eyebrow .eyebrow-menu ul li {
+  position: relative;
+  height: 20px; }
+  /* line 264, stdin */
+  body.liferay.starlight .page-eyebrow .eyebrow-menu ul li.user_options:hover > ul {
+    display: block; }
+  /* line 267, stdin */
+  body.liferay.starlight .page-eyebrow .eyebrow-menu ul li.user_options:hover > a.menu-item-quick {
+    background: #666;
+    color: #FFF; }
+  /* line 271, stdin */
+  body.liferay.starlight .page-eyebrow .eyebrow-menu ul li.user_options > ul {
+    position: absolute;
+    min-width: 120px;
+    left: 4px; }
+    /* line 275, stdin */
+    body.liferay.starlight .page-eyebrow .eyebrow-menu ul li.user_options > ul li {
+      border: none; }
+      /* line 277, stdin */
+      body.liferay.starlight .page-eyebrow .eyebrow-menu ul li.user_options > ul li a {
+        color: #006990; }
+        /* line 279, stdin */
+        body.liferay.starlight .page-eyebrow .eyebrow-menu ul li.user_options > ul li a:hover {
+          background-color: transparent;
+          color: #0095d3; }
+  /* line 287, stdin */
+  body.liferay.starlight .page-eyebrow .eyebrow-menu ul li.user_options > .dropdown2 {
+    position: absolute;
+    right: 0px;
+    width: 160px; }
+  /* line 295, stdin */
+  body.liferay.starlight .page-eyebrow .eyebrow-menu ul li a.menu-item-quick {
+    padding: 3px 13px 26px; }
+  /* line 299, stdin */
+  body.liferay.starlight .page-eyebrow .eyebrow-menu ul li.welcomeMsg {
+    border-left: 0; }
+    /* line 303, stdin */
+    body.liferay.starlight .page-eyebrow .eyebrow-menu ul li.welcomeMsg a.menu-item-quick.welcome_a {
+      padding-right: 0; }
+      /* line 305, stdin */
+      body.liferay.starlight .page-eyebrow .eyebrow-menu ul li.welcomeMsg a.menu-item-quick.welcome_a:hover {
+        text-decoration: none;
+        color: #FFF;
+        cursor: auto; }
+
+/* line 313, stdin */
+body.liferay.starlight .page-eyebrow .eyebrow-menu ul.nav-level-2 {
+  background-color: #f1f1f1;
+  border-top: 4px solid #0095d3;
+  box-shadow: 0 8px 8px 2px rgba(0, 0, 0, 0.5);
+  display: none;
+  list-style-type: none;
+  min-width: 120px;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  top: 26px;
+  width: 100%;
+  z-index: 100;
+  line-height: 2; }
+
+/* line 336, stdin */
+body.liferay.starlight .configDashBox .dropdown-menu li {
+  background: none;
+  display: block; }
+
+/* line 342, stdin */
+body.liferay.starlight #breadcrumb {
+  font-size: 100%;
+  padding: 0 0 0 0;
+  height: 25px; }
+  /* line 346, stdin */
+  body.liferay.starlight #breadcrumb .configDashBox .dropdown-menu li {
+    background: none;
+    display: block; }
+  /* line 352, stdin */
+  body.liferay.starlight #breadcrumb li {
+    background: none;
+    margin-right: 0;
+    padding-right: 0;
+    vertical-align: top; }
+    /* line 354, stdin */
+    body.liferay.starlight #breadcrumb li a {
+      color: #999;
+      font-weight: normal;
+      padding-left: 2px; }
+  /* line 359, stdin */
+  body.liferay.starlight #breadcrumb ul.breadcrumb {
+    padding-bottom: 8px;
+    margin: 0;
+    padding-top: 10px; }
+
+/* line 366, stdin */
+body.liferay.starlight label input[type="radio"]:checked + span {
+  cursor: default;
+  color: #333; }
+
+/* line 372, stdin */
+body.liferay.starlight .form-control {
+  background-image: none; }
+
+/* line 375, stdin */
+body.liferay.starlight input.form-control.focus {
+  background: white; }
+
+/* line 378, stdin */
+body.liferay.starlight input.focus {
+  background: none; }
+
+/* line 383, stdin */
+body.liferay.starlight .starlight-eyebrow-quick .user_options span.glyphicon-chevron-down {
+  float: none;
+  padding-left: 10px;
+  font-size: 12px; }
+
+/* line 397, stdin */
+body.liferay.starlight .hor-filter-list .col-lg-2 .hor-filter-item label input[type="radio"]:checked + span + span {
+  cursor: default;
+  color: #333; }
+
+/* line 409, stdin */
+body.liferay.starlight .icons-locale_bg {
+  background-position: 0 -516px;
+  display: inline-block;
+  height: 16px;
+  width: 38px; }
+
+/* line 415, stdin */
+body.liferay.starlight #breadcrumb {
+  height: 25px; }
+
+/* line 419, stdin */
+body.liferay.starlight .portlet-column-content.empty {
+  padding: 0; }
+
+/* line 424, stdin */
+body.liferay.starlight #modal_localeSelect ul.country-list li {
+  list-style: none;
+  line-height: 22px;
+  margin: 0 0 2px; }
+  /* line 426, stdin */
+  body.liferay.starlight #modal_localeSelect ul.country-list li a {
+    color: #4ba8c4;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600; }
+    /* line 432, stdin */
+    body.liferay.starlight #modal_localeSelect ul.country-list li a:visited {
+      color: #39C;
+      text-decoration: none; }
+
+/* line 439, stdin */
+body.liferay.starlight #modal_localeSelect .modal-content {
+  box-shadow: none;
+  background-color: transparent !important;
+  border: 0px;
+  border-radius: 0px; }
+
+/* line 442, stdin */
+body.liferay.starlight #modal_localeSelect .modal-dialog {
+  margin: 15% auto !important; }
+
+/* line 445, stdin */
+body.liferay.starlight #modal_localeSelect .modal-header {
+  border-bottom: 0px;
+  padding: 0px; }
+
+/* line 448, stdin */
+body.liferay.starlight #modal_localeSelect .close {
+  position: absolute !important;
+  right: 0;
+  top: -4px; }
+
+/* line 453, stdin */
+body.liferay.starlight #modal_localeSelect .modal-footer {
+  padding: 0px; }
+
+/* line 456, stdin */
+body.liferay.starlight #modal_localeSelect .modal-body {
+  padding: 8px 6px 1px; }
+
+/* line 459, stdin */
+body.liferay.starlight #modal_localeSelect .country-list {
+  font-size: 12px;
+  margin: 0px; }
+
+/* line 462, stdin */
+body.liferay.starlight #modal_localeSelect .option-header {
+  background: url("/static/myvmware/common/css/img/header-bg-select.png") no-repeat scroll -1px 0 transparent;
+  height: 150px;
+  margin-top: -7px;
+  position: relative; }
+
+/* line 468, stdin */
+body.liferay.starlight #modal_localeSelect .modal-title {
+  color: white;
+  font-size: 20px;
+  padding: 51px 0 5px 5px;
+  text-align: center;
+  width: 166px; }
+
+/* line 475, stdin */
+body.liferay.starlight #modal_localeSelect #option-inner-mid {
+  background: url("/static/myvmware/common/css/img/location-option-main-bg-mid.png") repeat-y scroll 100% 0 transparent;
+  height: 139px;
+  position: relative;
+  width: 576px; }
+
+/* line 481, stdin */
+body.liferay.starlight #modal_localeSelect #option-inner-bottom {
+  background: url("/static/myvmware/common/css/img/location-option-main-bg-btm.png") no-repeat scroll 100% 0 transparent;
+  width: 576px;
+  height: 9px; }
+
+/* line 486, stdin */
+body.liferay.starlight #modal_localeSelect #option-inner-top {
+  background: url("/static/myvmware/common/css/img/location-option-main-bg-top.png") no-repeat scroll 100% 0 transparent;
+  width: 576px;
+  height: 7px; }
+
+/* line 493, stdin */
+body.liferay.starlight .addontable-head small {
+  font-size: 16px;
+  white-space: nowrap; }
+
+/* line 500, stdin */
+body.liferay.starlight #localeSelector.vmbar-vmware {
+  display: inline-block; }
+
+/* line 503, stdin */
+body.liferay.starlight #localeSelector .locale-selector {
+  line-height: 14px;
+  vertical-align: top; }
+
+/* line 507, stdin */
+body.liferay.starlight input {
+  padding: 0 15px; }
+
+/* line 511, stdin */
+body.liferay.starlight #main-content .aui-w75, body.liferay.starlight #main-content .aui-w25 {
+  float: left;
+  padding: 0; }
+
+/* line 515, stdin */
+body.liferay.starlight.login_liferay .content-container, body.liferay.starlight.login_liferay #content-container, body.liferay.starlight.login_liferay #main-content {
+  background: none;
+  padding: 0; }
+  /* line 516, stdin */
+  body.liferay.starlight.login_liferay .content-container .aui-w75, body.liferay.starlight.login_liferay #content-container .aui-w75, body.liferay.starlight.login_liferay #main-content .aui-w75 {
+    width: 63.66%;
+    margin-right: 3%;
+    float: left; }
+  /* line 517, stdin */
+  body.liferay.starlight.login_liferay .content-container .aui-w25, body.liferay.starlight.login_liferay #content-container .aui-w25, body.liferay.starlight.login_liferay #main-content .aui-w25 {
+    width: 33.33%;
+    float: right; }
+
+/* line 521, stdin */
+body.liferay.starlight.login_liferay .portlet-content {
+  background: none repeat scroll 0 0 #FFF; }
+
+/* line 526, stdin */
+body.liferay.starlight.home_liferay .content-container, body.liferay.starlight.home_liferay #content-container, body.liferay.starlight.home_liferay #main-content {
+  background: none;
+  padding: 0; }
+  /* line 527, stdin */
+  body.liferay.starlight.home_liferay .content-container .aui-w75, body.liferay.starlight.home_liferay #content-container .aui-w75, body.liferay.starlight.home_liferay #main-content .aui-w75 {
+    width: 72.5%;
+    margin-right: 3%;
+    float: left; }
+  /* line 528, stdin */
+  body.liferay.starlight.home_liferay .content-container .aui-w25, body.liferay.starlight.home_liferay #content-container .aui-w25, body.liferay.starlight.home_liferay #main-content .aui-w25 {
+    width: 23.5%;
+    float: right; }
+
+/* line 530, stdin */
+body.liferay.starlight.home_liferay .portlet-content {
+  background: none repeat scroll 0 0 #FFF; }
+
+/* line 532, stdin */
+body.liferay.starlight.home_liferay #content-container, body.liferay.starlight.home_liferay .content-container {
+  padding: 0;
+  background: none; }
+
+/* line 533, stdin */
+body.liferay.starlight.home_liferay .header {
+  height: 98px; }
+
+/* line 534, stdin */
+body.liferay.starlight.home_liferay .container {
+  width: 98%; }
+
+/* line 535, stdin */
+body.liferay.starlight.home_liferay #main-content .portlet-layout {
+  background: none repeat scroll 0 0 #fff;
+  margin-bottom: 30px; }
+
+/* line 539, stdin */
+body.liferay.starlight.home_liferay .navbar {
+  margin-bottom: 0; }
+
+/* line 544, stdin */
+body.liferay #vmbar {
+  display: inline-block; }
+
+/* line 556, stdin */
+.ie7.starlight .page-eyebrow .eyebrow-menu ul li {
+  float: left; }
+
+/* line 574, stdin */
+.lt-ie9 .starlight .hor-filter-list .col-lg-2 .hor-filter-item label input[type="radio"][checked="checked"] + span {
+  cursor: default;
+  color: #333; }
+  /* line 577, stdin */
+  .lt-ie9 .starlight .hor-filter-list .col-lg-2 .hor-filter-item label input[type="radio"][checked="checked"] + span + span {
+    cursor: default;
+    color: #333; }
+
+@media only all and (max-width: 768px) {
+  /* line 598, stdin */
+  body.liferay.starlight .header .nav-menu ul {
+    margin: 0px; }
+    /* line 601, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 > li {
+      border-top: 1px solid #d0d0d0; }
+      /* line 604, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 > li a.menu-item-primary-1 {
+        color: #006690;
+        left: 20px;
+        position: relative;
+        padding: 8px 0px 15px;
+        display: inline-block;
+        border-top: 0px; }
+        /* line 607, stdin */
+        body.liferay.starlight .header .nav-menu ul.nav-level-1 > li a.menu-item-primary-1:before {
+          background: none;
+          content: "";
+          display: block;
+          height: 13px;
+          left: 16px;
+          position: absolute;
+          top: 16px;
+          width: 8px; }
+      /* line 618, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 > li a.menu-item-primary-2 {
+        border-top: 0px; }
+      /* line 623, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 > li.focused {
+        color: #FFF;
+        display: block;
+        top: 0; }
+      /* line 626, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 > li.show_drop {
+        background: url("/vmf/c/4.0/images/mobile-menu-arrow.png") no-repeat scroll 12px 15px transparent; }
+      /* line 630, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 > li:hover > ul {
+        display: none; }
+    /* line 635, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 li {
+      height: auto;
+      background: none repeat scroll 0 0 #f1f1f1;
+      overflow: initial;
+      float: left;
+      display: block;
+      width: 100%;
+      line-height: 2;
+      font-size: 16px; }
+      /* line 639, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 li.focused {
+        height: auto;
+        background: none repeat scroll 0 0 #f1f1f1;
+        overflow: initial;
+        float: left;
+        display: block;
+        width: 100%;
+        line-height: 2;
+        font-size: 16px; }
+        /* line 643, stdin */
+        body.liferay.starlight .header .nav-menu ul.nav-level-1 li.focused > div > ul {
+          display: block;
+          padding: 0;
+          padding-left: 5%; }
+        /* line 647, stdin */
+        body.liferay.starlight .header .nav-menu ul.nav-level-1 li.focused > div ul.nav-level-2 .level-3 {
+          display: block;
+          padding-left: 5%; }
+        /* line 653, stdin */
+        body.liferay.starlight .header .nav-menu ul.nav-level-1 li.focused ul.level-3 li.level-3Child {
+          padding-left: 8%; }
+        /* line 657, stdin */
+        body.liferay.starlight .header .nav-menu ul.nav-level-1 li.focused > ul {
+          display: block;
+          width: 100%;
+          position: relative; }
+          /* line 659, stdin */
+          body.liferay.starlight .header .nav-menu ul.nav-level-1 li.focused > ul ul {
+            display: block;
+            width: 100%;
+            position: relative; }
+      /* line 668, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 li ul.nav-level-2 li.show_drop_l2:before {
+        content: ""; }
+      /* line 671, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-1 li ul.nav-level-2 li.show_drop_l2:after {
+        content: ""; }
+    /* line 681, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 ul.nav-level-2 ul {
+      left: 15px;
+      list-style: none outside none;
+      padding: 0;
+      top: 5px;
+      border-top: 0px;
+      width: 90%;
+      z-index: 100;
+      box-shadow: none; }
+    /* line 692, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 ul.nav-level-2 a.ul_heading {
+      display: none; }
+    /* line 698, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-2 {
+      border-top: 0px;
+      background-color: #f7f7f7;
+      right: 0px; }
+      /* line 700, stdin */
+      body.liferay.starlight .header .nav-menu ul.nav-level-2 .col {
+        margin: 0px; }
+    /* line 704, stdin */
+    body.liferay.starlight .header .nav-menu ul.nav-level-1 {
+      overflow: initial; }
+  /* line 711, stdin */
+  body.liferay.starlight > ul ul {
+    overflow: initial; }
+  /* line 716, stdin */
+  body.liferay.starlight .container-fluid > .navbar-collapse {
+    margin-right: 0px;
+    margin-left: 0px;
+    float: none;
+    width: 100%; }
+  /* line 723, stdin */
+  body.liferay.starlight .navbar-collapse.in {
+    overflow: initial; }
+  /* line 728, stdin */
+  body.liferay .dropdown1 li.focused {
+    background: url("/vmf/c/4.0/images/mobile-menu-arrow.png") no-repeat scroll 0 0 transparent;
+    width: 16px; }
+  /* line 734, stdin */
+  body.liferay .nav-level-1 ul.nav-level-2 div.col {
+    display: block;
+    float: none;
+    width: 100%; }
+    /* line 736, stdin */
+    body.liferay .nav-level-1 ul.nav-level-2 div.col a {
+      background: none; }
+    /* line 739, stdin */
+    body.liferay .nav-level-1 ul.nav-level-2 div.col li {
+      background: none;
+      display: block;
+      list-style: none; }
+  /* line 748, stdin */
+  body.liferay .nav-menu ul.nav-level-2 li.has-subnav {
+    margin-top: 0px;
+    line-height: 2; }
+    /* line 750, stdin */
+    body.liferay .nav-menu ul.nav-level-2 li.has-subnav p.menu-item-primary-2 {
+      width: 100%;
+      margin-bottom: 0px; }
+      /* line 752, stdin */
+      body.liferay .nav-menu ul.nav-level-2 li.has-subnav p.menu-item-primary-2 a {
+        border-bottom: 0px none;
+        padding-left: 5%; }
+        /* line 754, stdin */
+        body.liferay .nav-menu ul.nav-level-2 li.has-subnav p.menu-item-primary-2 a.menu-item-primary-2 {
+          border-bottom: 0; }
+  /* line 763, stdin */
+  body.liferay .navbar-collapse {
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    background-color: #f7f7f7; }
+  /* line 767, stdin */
+  body.liferay .js .menu {
+    overflow: initial; }
+  /* line 772, stdin */
+  body.liferay .js .menu-section > ul ul {
+    overflow: initial; } }
+
+/* Styles for Place holder */
+/* line 790, stdin */
+.ie .placeholder-box {
+  position: relative;
+  text-align: left;
+  display: inline-block;
+  float: left; }
+
+/* line 796, stdin */
+.ie .placeholder-box .placeholder-holder {
+  color: #999999;
+  font-size: 14px;
+  left: 0;
+  margin-left: 10px !important;
+  margin-top: 17px;
+  padding: 3px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 90%; }
+
+/* line 808, stdin */
+.ie .placeholder-box .placeholder-holder {
+  margin-top: 20px !important; }
+
+/* line 811, stdin */
+.ie .placeholder-box.selected input, .placeholder-box.selected textarea {
+  opacity: 0.4; }
+
+/* line 814, stdin */
+.ie .placeholder-box.selected .placeholder-holder {
+  color: #bbb; }
+
+/* line 817, stdin */
+.ie .placeholder-box input, .placeholder-box textarea {
+  opacity: 1 !important;
+  z-index: 2; }
+
+/* line 823, stdin */
+html, body {
+  background: -moz-linear-gradient(top, #ffffff 0%, #ededed 99%) !important;
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(99%, #ededed)) !important;
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #ededed 99%) !important;
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #ededed 99%) !important;
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #ededed 99%) !important;
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #ededed 99%) repeat scroll 0 0 transparent !important;
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0) !important; }
+
+/* line 843, stdin */
+body.liferay.starlight .page-b-header-gradient {
+  background: -moz-linear-gradient(top, #ffffff 0%, #ededed 99%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(99%, #ededed));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%, #ededed 99%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%, #ededed 99%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%, #ededed 99%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%, #ededed 99%) repeat scroll 0 0 transparent;
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0); }
+
+/* line 864, stdin */
+body.starlight.liferay .page-eyebrow {
+  background: #6db33f !important;
+  border-bottom: 0px none; }
+  /* line 865, stdin */
+  body.starlight.liferay .page-eyebrow #localeSelector a:hover {
+    color: #FFF;
+    text-decoration: none; }
+
+/* line 867, stdin */
+body.starlight.liferay .page-eyebrow .eyebrow-menu ul li {
+  border-left: 0px none #FFF !important; }
+
+/* line 868, stdin */
+body.starlight.liferay .page-eyebrow .eyebrow-menu ul li > a:hover {
+  text-decoration: none;
+  color: #FFF; }
+
+/* line 869, stdin */
+body.starlight.liferay .page-eyebrow .eyebrow-menu ul li:first-child {
+  border-left: 0px none #FFF !important; }
+
+/* line 870, stdin */
+body.liferay.starlight .header .nav-menu ul.nav-level-1 ul.nav-level-2 > li a:hover {
+  color: #0095D3; }
+
+/* line 872, stdin */
+body.starlight.liferay.vmf4 #content-container {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.25); }
+
+/* line 873, stdin */
+body.starlight.liferay.vmf4 .header .nav-menu ul.nav-level-1 > li:hover {
+  background-color: #595959;
+  color: #FFF !important; }
+
+/* line 874, stdin */
+body.starlight.liferay.vmf4 #homePageNavigator .menu-item-primary-1 {
+  padding: 10px 25px 15px;
+  color: #464646; }
+
+/* line 875, stdin */
+body.starlight.liferay.vmf4 #homePageNavigator li:hover .menu-item-primary-1 {
+  color: #FFF; }
+
+/* line 876, stdin */
+body.starlight.liferay.vmf4 .header .nav-menu ul.nav-level-2 {
+  border-top: 4px solid #595959; }
+
+/* line 877, stdin */
+body.starlight.liferay.vmf4 .container-fluid .contentBg .col-md-4 .rightContainer {
+  padding-right: 0; }
+
+/* line 878, stdin */
+body.starlight.liferay.vmf4 .container-fluid .contentBg .col-md-4 {
+  padding-right: 0; }
+
+/* line 879, stdin */
+body.starlight.liferay.vmf4 .keyinfo {
+  background: url("/static/myvmware/common/css/reskin_images/icon_alert_orange_triangle.png") 4% 47% no-repeat #f6fbfc;
+  padding: 10px 0 10px 10%;
+  font-size: 14px;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.25); }
+
+/* line 886, stdin */
+body.starlight.liferay.vmf4.ie7 #content-container {
+  border: 1px solid #e6e6e6; }
+
+/* line 887, stdin */
+body.starlight.liferay.vmf4.ie7 .keyinfo {
+  border: 1px solid #e6e6e6; }
+
+/* line 888, stdin */
+body.starlight.liferay.vmf4.ie7 ul.nav-level-2 {
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6; }
+
+/* line 891, stdin */
+body.starlight.liferay.vmf4.ie8 #content-container {
+  border: 1px solid #e6e6e6; }
+
+/* line 892, stdin */
+body.starlight.liferay.vmf4.ie8 .keyinfo {
+  border: 1px solid #e6e6e6; }
+
+/* line 893, stdin */
+body.starlight.liferay.vmf4.ie8 ul.nav-level-2 {
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6; }
+
+/* line 897, stdin */
+body.starlight.liferay.home_liferay .portlet-layout {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden; }
+
+/* line 898, stdin */
+body.starlight.liferay.home_liferay.ie7 .portlet-layout, body.starlight.liferay.home_liferay.ie8 .portlet-layout, body.starlight.liferay.home_liferay.ie9 .portlet-layout {
+  border: 1px solid #e6e6e6;
+  box-shadow: none !important; }
+
+/* line 900, stdin */
+body.starlight.liferay.home_liferay.ie8 #content-container, body.starlight.liferay.home_liferay.ie7 #content-container {
+  border: 0px none #e6e6e6; }
+
+/* line 902, stdin */
+body.starlight.liferay.home_liferay #content-container {
+  box-shadow: none !important; }
+
+/*# sourceMappingURL=sass */

@@ -1,0 +1,14 @@
+/**
+ * order of the combined files
+ *  tmpl.js
+ *	jquery.ui.widgets.js
+ *  jquery.iframe-transport.js
+ *	jquery.fileupload.js 	
+ *	jquery.fileupload-process.js
+ *	jquery.fileupload-validate.js
+ *	jquery.fileupload-ui.js
+ *  jquery.xdr-transport.js
+ *	jquery.fileupload-ui-extend.js
+ *	vm.fileupload.wrapper.js
+ *
+ */

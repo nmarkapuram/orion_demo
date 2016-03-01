@@ -1,0 +1,130 @@
+<section>
+<article>
+    <div class="bottomBorder" style="margin: 0px;">
+        <div class="row margin-bottom-14 margin-right-0">
+            <div class="col-md-8">
+                <h1 class="component-heading font-size-40 margin-bottom-0">{{globalVars.advantageEstimator}}</h1>
+            </div>
+            <div class="col-md-4">
+              <div class="row discountMatrix">
+                <div class="col-sm-6"><span>{{globalVars.currentLevel}}</span>&nbsp;<span class="font_20 padding-left-5 padding-top-5">D</span> 
+                  <span class="infoIcon padding-left-5"><a style="position:absolute;display:inline-block;vertical-align:text-top" class="icons-icn_warning" tooltip-placement="{{getTooltipPlacement()}}" tooltip-trigger="{{{true: 'mouseenter', false: 'never'}['']}}" data-tooltip-html-unsafe="some content"></a></span>
+                </div>
+                <div class="col-sm-6"><span>{{globalVars.currentPoints}}&nbsp;</span><span class="font_20 padding-left-5 padding-top-5">900</span>
+                 <span class="infoIcon padding-left-5"><a style="position:absolute;display:inline-block;vertical-align:text-top" class="icons-icn_warning" tooltip-placement="{{getTooltipPlacement()}}" tooltip-trigger="{{{true: 'mouseenter', false: 'never'}['']}}" data-tooltip-html-unsafe="some content"></a></span>
+               </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="margin-top-20">
+        <div class="row">
+        	<div class="col-md-12">
+        		<label><span>{{globalVars.createEstimate}}</span></label>
+        		<p ng-bind-html = "globalVars.estimatorIntroText"></p>
+   		 	</div>
+   		 	<div class="col-md-12 margin-top-10">
+   		 		<p ng-bind-html = "globalVars.estimatorDiscountText"></p>
+   		 	</div>
+        </div>
+    </div>
+<article>
+<article class="container-fluid">
+    <div class="row margin-top-30">
+      <div class="col-md-6 productSearch">
+        <div class="row search_upgrade_style">
+          <div class="col-md-9" ng-if="isOranSelected">
+              <span class="margin-top-5">{{globalVars.appliedOran}}&nbsp;</span> 
+              <a href="javascript:void(0);" ng-click="showOranDetailsPopup()" style="text-decoration:underline">{{appliedOranObj.oranNumber}}</a>
+              <a href="javascript:void(0);" class="oranClose" ng-click="removeSelectedOran()"></a>
+          </div>
+          <div class="col-md-3" ng-if="!isOranSelected">
+          	<p class="margin-top-5">{{globalVars.searchOran}}</p>
+          </div>
+          <div class="col-md-6 padding-left-0" ng-if="!isOranSelected">
+            <div class="input-group oranTextBox">
+              <input type="text" class="form-control" placeholder="" ng-model="prdctFmlySlctd" ng-keypress="inputKeyPressHandler($event)">
+              <span class="input-group-btn">
+                <a class="btn btn-primary" type="button" ng-click="getOranSearchResult($event)"><span class="glyphicon glyphicon-search"></span></a>
+              </span>
+              <div class="ajaxSpinner" ng-if="showSearchResultLoader">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-4 initial_label">
+      			<p class="margin-top-5">{{globalVars.selectCustomerType}}</p>
+      		</div>
+      		<div class="col-md-6">
+          			<select class="form-control" ng-options="" data-ng-model="localObj.custTypeSel" data-width="400px" data-size="6" selectpicker="">
+          				<option value=''>Select a Customer Type</option>
+          				<option value=''>Commercial</option>
+          				<option value=''>Academic</option>
+          			</select>
+      		</div>
+          <div class="col-md-2"></div>
+    	 </div>
+      </div>
+    </div>
+</article>
+<article class="container-fluid">
+  <div class="row margin-top-30">
+    <div class="col-md-8"></div>
+    <div class="col-md-4 text-right">
+      <div class="margin-bottom-10">
+         <a class="print_link" href="#">{{globalVars.print}}</a>
+         <a class="email_link" href="#">{{globalVars.email}}</a>
+         <a class="export_link" href="#">{{globalVars.export}}</a>
+       </div>
+    </div>
+    <!--Start : Splitpane incorporation for LHS and RHS-->
+    <div class="pretty-split-pane-frame">
+        <vmf-split-container>
+            <vmf-split-pane-component panewidth="30%" minwidth="30%" maxwidth="40%">
+                <div class="pretty-split-pane-component-inner">
+                  <div class="tabNavigationHolderWrapper">    
+                      <div tabset>
+                        <div tab heading='{{globalVars.products}}'>
+                            <products-tab></products-tab>
+                        </div>
+                         <div tab heading='{{globalVars.services}}'>
+                            <services-tab></services-tab>
+                        </div>  
+                      </div>
+                   </div>
+                </div>
+            </vmf-split-pane-component>
+            <vmf-split-pane-divider panewidth="10px" clicks="0" close="right"></vmf-split-pane-divider>
+            <vmf-split-pane-component>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div style="padding:10px 20px; background-color:#f6f6f6">
+                     <a class="delete_link" href="#">{{globalVars.delete}}</a>
+                    </div>
+                  </div>
+                  <div class="col-md-12" id="orionEstimatorTable">
+                      <ng-orion-estimator-table></ng-orion-estimator-table>
+                  </div>
+                </div>
+             </vmf-split-pane-component>
+        </vmf-split-container>
+    </div>
+    <!--End : Splitpane incorporation for LHS and RHS-->
+ </div>
+  <div class="row margin-top-20">
+    <div class="col-xs-6"></div>
+    <div class="col-xs-6 text-right">
+       <a class="btn btn-primary" ng-click="">{{globalVars.saveEstimate}}</a>
+    </div>
+  </div>
+
+</article>
+</section>
+
+	
+
+
+
+

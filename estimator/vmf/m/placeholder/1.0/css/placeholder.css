@@ -1,0 +1,31 @@
+.placeholder-box {
+	position: relative;
+    text-align:left;
+	display:inline-block;
+	float:left;
+}
+.placeholder-box .placeholder-holder {
+    color: #999999;
+    font-size: 14px;
+    left: 0;
+    margin-left: 10px !important;
+    margin-top: 17px;
+    padding: 3px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+	width:90%;
+}
+.ie .placeholder-box .placeholder-holder{
+    margin-top: 20px !important;
+}
+.placeholder-box.selected input, .placeholder-box.selected textarea {
+	opacity: 0.4;
+}
+.placeholder-box.selected .placeholder-holder {
+	color: #bbb;
+}
+.placeholder-box input, .placeholder-box textarea {
+	opacity: 1 !important;
+	z-index:2;
+}

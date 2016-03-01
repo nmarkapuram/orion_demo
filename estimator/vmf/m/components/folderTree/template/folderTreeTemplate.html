@@ -1,0 +1,20 @@
+
+<div class="folderTreeWrapper">
+	<div class="actionAllBox">
+		<div class="midWrapper">
+			<div class="innerWrapper">
+				
+			</div>
+		</div>
+	</div>
+
+   <div class="folderTree">
+      <div class="folderTreeHeader" ng-if="rootName.showHeader">
+         <a href="javascript:void(0)" class="libraryCheckbox">
+            <div vmf-checkbox-group class="vmf-checkbox-group" type="1" model="rootName.checked" name="checkBoxName2" c-label="rootName.text" c-disabled="rootName.disabled"></div>
+         </a>
+         <span class="ftAjaxLoader hidden">&nbsp;</span>
+         <a class="actionAll" href="{{globalVars.actionsLink}}" ng-click="openMainOptions($event)">{{globalVars.actionsItem}}</a>
+      </div>
+   </div>
+</div>

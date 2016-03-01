@@ -1,0 +1,54 @@
+.ie8{
+.vmf-calContainer {
+	.vmf-calInput {		
+		color:#333;
+	}
+	.placeholdersjs {
+			color:#999999;
+    }
+	.contractText {
+		display:inline;
+	}
+	.calIcon {
+		top:3px;
+	}
+}
+.calendercontainer {
+	left: 0px;
+	top:30px;
+	width:537px;
+	z-index:999;
+	.vmf-dropdown-content
+	{
+		background:none;
+	}
+
+	 	.tableBorder
+			{
+				border-right:1px solid #e6e6e6;
+				.first-calendar
+					{
+						border-bottom:0;
+					}
+			}
+		.vmf-dateContainer
+			{
+				float:left;
+				min-height:260px;
+				margin-bottom:15px;
+			}
+
+	.table-condensed
+	{
+		margin-right:0;
+		td
+		{
+			padding:7px 12px;
+		}
+	&.first-calendar 
+	{
+	 padding-bottom: 0;
+	}
+	}
+}
+}

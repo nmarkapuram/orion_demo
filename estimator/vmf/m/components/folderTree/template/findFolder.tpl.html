@@ -1,0 +1,41 @@
+<div class="modal fade vmf-folderModel vmf-modal">
+    <div class="modal-dialog row">
+        <div class="modal-content">
+            <form>
+            <div class="modal-header">
+                <a href="javascript:void(0)" class="closeIcon" title="close" aria-hidden="true" ng-click="closeModal()"></a>
+                <h4 class="modal-title" id="myModalLabel">
+                   {{modalData.operationScope.text}}                 
+               </h4>
+            </div>
+            <div class="modal-body">
+				<div class="findFolder">
+					<span class="bodyText">{{globalVars.textFindThenSelectFldr}}</span>
+					<div class="findFolderContainerHeader">{{globalVars.textLicenseKeysFldrs}}</div>
+					<div class="bodyContainer">
+						<div>
+							<input type="text" ng-model="txtFindFolderSearch" placeholder="{{globalVars.folderNameHint}}" />
+							<button type="button" class="vmf-btn vmf-primary" ng-click="findFolderSearch()" ng-disabled="txtFindFolderSearch.length == 0">{{globalVars.textFind}}</button>
+						</div>
+					</div>
+					<div class="findFolderResults">						
+						<div ng-if="findFolderErrorMsg.length >= 1">{{findFolderErrorMsg}}</div>
+						<ul>
+							<li ng-repeat="findFolderResult in findFolderData">
+								<input type="radio" ng-model="findFolderGetSltRadio" ng-change="changeRadio(findFolderResult)" name="findFolderRdio" ng-value="findFolderResult"><span>{{findFolderResult.folderName}}</span><span class="folderPath">{{findFolderResult.fullFolderPath}}</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div ng-show="ajaxLoader" class="ajaxLoader"></div>
+			</div>
+			<div class="modal-footer">
+				<div class="rightButton">
+				<button type="button" class="vmf-btn vmf-primary" ng-click="ftFindFolder('filterPageFT')" ng-disabled="!findFolderGetSltRadio">{{globalVars.textSelect}}</button>
+				<button type="button" class="vmf-btn vmf-secondary" ng-click="closeModal()">{{globalVars.textCancel}}</button>
+				</div>
+			</div>
+        </div>
+        </form>
+    </div>
+</div>

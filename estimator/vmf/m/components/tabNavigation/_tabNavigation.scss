@@ -1,0 +1,140 @@
+
+.vmfTab {
+    display: block;
+    border: 1px solid $vmfBorderColor;
+    overflow: hidden;
+    @include linearGradient(top,#F1F1F1,#F7F7F7) ;
+    filter: none;
+    ul {
+         float:left;
+        li {
+             line-height:15px;
+            float: left;
+           a {
+               font-family:$font-stack;
+               font-size:16px;
+               color: $labelColor;
+               padding:15px 30px 12px 30px;
+               border-right:1px solid $nav-tabs-border-color;
+               &:hover, &.activeState, &.activeState:hover{
+                   color:#FFF;
+                   @include linearGradient(top,#666666,#333333) ;
+                   filter: none;
+               }
+           }
+        }
+    } 
+}
+.tab_head_txt {
+    font-family:$font-stackSemiBold;
+    margin-right:15px;
+    font-size:1.375rem;
+    line-height:18px;
+    margin-top:9px;
+}
+.vmfTab2 {
+    display: block;
+    overflow: hidden;
+    border-bottom:3px solid $vmfBorderColor;
+    margin-bottom:9px;
+    ul {
+         float:left;
+         margin-bottom:25px;
+        li {
+            border:0 none;
+            height:35px;
+            float:left;
+            vertical-align:middle;
+           a {
+               color: #006990;
+               padding: 10px 15px;
+               line-height:15px;
+               margin-right:5px;
+               &:hover, &.activeState, &.activeState:hover{
+                   color:#FFF;
+                   background:#0095d3;
+              } 
+             }
+           }
+        }
+    }
+     
+.vmfTab1 {
+    border: 0 none;
+    border-bottom: 2px solid $borderBlueColor;
+    background: none;
+     ul {        
+        li {
+           a {
+               color: #006990;
+               padding:10px 15px;
+               background:#CCC;
+               margin-right:5px;
+               font-family: $font-stack;
+               font-size:16px;
+               &:hover, &.activeState, &.activeState:hover {
+                   background:#0095D3;
+                   color:#fff;
+               }
+
+           }
+        }
+    }
+}
+.tab-pane{
+  padding: 1rem 0rem;
+}
+
+.vmfTab .navbar-collapse { 
+    padding-left:0px; 
+    padding-right:0px;
+}
+.vmfTab .navbar-collapse ul{ 
+    margin-bottom:0px; 
+}
+.vmfTab  .navbar-header .navbar-toggle {
+    background:url("/images/hamberger-menu.png") no-repeat center;
+    display:inline-block;
+    height: 24px;
+    width: 34px;
+    margin-top: 3px;
+}
+
+
+
+.vmfTab .navbar-header {
+    padding-left:10px;
+    padding-right:10px;
+}
+.navbar-collapse {
+    border-top:1px solid $vmfBorderColor;
+    padding:5px 0px;
+}
+
+
+
+
+@media (min-width: $screen-tablet) {
+//.vmfTab ul {display:none;}
+    .vmfTab  .navbar-header {
+         display: none;   
+    }
+    .navbar-collapse {
+        border-top:0;
+        padding-top:0;
+    }
+    .vmfTab  ul li, .vmfTab ul{
+        float:left;
+        width:auto;
+    }
+    .vmfTab  ul li a{
+        float:left;
+        width:auto;
+    }
+    
+}
+
+vmf-tabsone ul, vmf-tabsone ul li a{ 
+     margin-bottom:0px;  
+     line-height:10px; 
+}

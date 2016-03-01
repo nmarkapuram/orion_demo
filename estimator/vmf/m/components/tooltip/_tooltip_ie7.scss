@@ -1,0 +1,18 @@
+.vmf-tooltip-holder {
+    > div {
+      float:left;
+      .vmf-dropdown-content {
+        float:left;
+        width:310px;
+      }
+    }
+    position:static;
+
+}
+
+.vmf-dropdown-content {
+  
+    ul {
+      top:27px;
+    }
+}

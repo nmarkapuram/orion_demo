@@ -1,0 +1,48 @@
+.folderTree
+{
+    a {
+          padding-top: 11px;
+          font-size:14px; 
+        label {
+            font-size:14px;   
+        }
+    }
+}  
+.folderTree{
+.folderTreeHeader {
+    .folderSelector {
+          font-size:14px;
+      }
+
+    .customCheckBox {
+        margin-top:0px;
+    }
+   a {
+        font-size:14px;
+        padding-top: 11px;
+        padding-bottom:11px;
+    }
+   .actionAll {
+        font-size: 14px;
+        padding-top: 13px;
+        padding-bottom: 9px;
+    }
+  }
+}
+.expandCollapseIcon {
+    top:12px;
+}
+.modal-dialog{
+        .modal-body{
+            min-height:360px;
+            .inviteUser {
+               min-height:300px;             
+            }
+        }
+    
+} 
+.withoutCheckBox {
+  .custom-checkbox{
+    padding-left:0px;
+  }
+}

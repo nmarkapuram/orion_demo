@@ -1,0 +1,1811 @@
+Component – Folder Tree
+
+CREATION
+<div vmf-folder-tree tree="folderStructure.folderContent" root-name="rootName1" multiple-select="on">
+
+STEP 1: integrate  “vmf-folder-tree” directive to create Folder Tree.
+STEP 2: provide  “tree”  to configure the Tree.
+STEP 3: provide  “root-name”  to configure the Library name.
+STEP 4: provide  “multiple-select”  to configure the multiple selection of tree.
+STEP 5: provide  “folder-click-call-back”  to configure the on click event of folder.
+
+
+Tree :
+Tree can be provided as an object by using “tree” attribute. 
+Options:
+Provide tree information array here
+Sample object :
+$scope.tree = [{
+                    "status": "INACTIVE",
+                    "folderType": "ROOT",
+                    "fullFolderPath": "HOME",
+                    "rootFolderId": 0,
+                    "folderId": "1000",
+                    "folderName": "HOME",
+                    "parentFolderId": "0",
+                    "folderLevel": 1,
+                    "folderAccess": "NONE",
+                    "isLeaf": false,
+                    "hasSubFolders": true,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Delete Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Rename Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Move Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabledClass": "disabled"
+                    }],
+                    "accessable": false,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Home Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Home vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Home Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Home Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Home Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Home Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\African Region",
+                    "rootFolderId": 0,
+                    "folderId": "1001",
+                    "folderName": "African Region",
+                    "parentFolderId": "1000",
+                    "folderLevel": 2,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": true,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My African Region Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'African Region vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My African Region Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My African Region Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My African Region Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My African Region Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Business Testing",
+                    "rootFolderId": 0,
+                    "folderId": "1002",
+                    "folderName": "Business Testing",
+                    "parentFolderId": "1000",
+                    "folderLevel": 2,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Business Testing Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Business Testing vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Business Testing Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Business Testing Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Business Testing Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Business Testing Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\HORIZON VIEW",
+                    "rootFolderId": 0,
+                    "folderId": "1003",
+                    "folderName": "HORIZON VIEW",
+                    "parentFolderId": "1000",
+                    "folderLevel": 2,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My HORIZON VIEW Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'HORIZON VIEW vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My HORIZON VIEW Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My HORIZON VIEW Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My HORIZON VIEW Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My HORIZON VIEW Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "INACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Human Resources",
+                    "rootFolderId": 0,
+                    "folderId": "1004",
+                    "folderName": "Human Resources",
+                    "parentFolderId": "1000",
+                    "folderLevel": 2,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Delete Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Rename Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Move Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabledClass": "disabled"
+                    }],
+                    "accessable": false,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Human Resources Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Human Resources vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Human Resources Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Human Resources Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Human Resources Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Human Resources Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Jasons Keys",
+                    "rootFolderId": 0,
+                    "folderId": "1005",
+                    "folderName": "Jasons Keys",
+                    "parentFolderId": "1000",
+                    "folderLevel": 2,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": true,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Jasons Keys Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Jasons Keys vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Jasons Keys Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Jasons Keys Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Jasons Keys Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Jasons Keys Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Marketing",
+                    "rootFolderId": 0,
+                    "folderId": "1006",
+                    "folderName": "Marketing",
+                    "parentFolderId": "1000",
+                    "folderLevel": 2,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": true,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Marketing Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Marketing vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Marketing Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Marketing Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Marketing Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Marketing Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\VMworld test folder",
+                    "rootFolderId": 0,
+                    "folderId": "1007",
+                    "folderName": "VMworld test folder",
+                    "parentFolderId": "1000",
+                    "folderLevel": 2,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": true,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My VMworld test folder Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'VMworld test folder vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\African Region\\Sub-African Region 1",
+                    "rootFolderId": 0,
+                    "folderId": "1008",
+                    "folderName": "Sub-African Region 1",
+                    "parentFolderId": "1001",
+                    "folderLevel": 3,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Sub-African Region 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Sub-African Region 1 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\African Region\\Sub-African Region 2",
+                    "rootFolderId": 0,
+                    "folderId": "1009",
+                    "folderName": "Sub-African Region 2",
+                    "parentFolderId": "1001",
+                    "folderLevel": 3,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Sub-African Region 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Sub-African Region 2 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\African Region\\Sub-African Region 3",
+                    "rootFolderId": 0,
+                    "folderId": "1010",
+                    "folderName": "Sub-African Region 3",
+                    "parentFolderId": "1001",
+                    "folderLevel": 3,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Sub-African Region 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Sub-African Region 3 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-African Region 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Jasons Keys\\Test Folder 1",
+                    "rootFolderId": 0,
+                    "folderId": "1011",
+                    "folderName": "Test Folder 1",
+                    "parentFolderId": "1005",
+                    "folderLevel": 3,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Delete Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Rename Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Move Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabledClass": "disabled"
+                    }],
+                    "accessable": false,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Test Folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Test Folder 1 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Jasons Keys\\Test Folder 2",
+                    "rootFolderId": 0,
+                    "folderId": "1012",
+                    "folderName": "Test Folder 2",
+                    "parentFolderId": "1005",
+                    "folderLevel": 3,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": true,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Test Folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Test Folder 2 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Jasons Keys\\Test Folder 2\\Test Sub Folder",
+                    "rootFolderId": 0,
+                    "folderId": "1013",
+                    "folderName": "Test Sub Folder",
+                    "parentFolderId": "1012",
+                    "folderLevel": 4,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": true,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Delete Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Rename Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Move Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabledClass": "disabled"
+                    }],
+                    "accessable": false,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Test Sub Folder Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Test Sub Folder vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "INACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Jasons Keys\\Test Folder 2\\Test Sub Folder\\Test Sub Folder 1",
+                    "rootFolderId": 0,
+                    "folderId": "1014",
+                    "folderName": "Test Sub Folder 1",
+                    "parentFolderId": "1013",
+                    "folderLevel": 4,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Delete Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Rename Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Move Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabledClass": "disabled"
+                    }],
+                    "accessable": false,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Test Sub Folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Test Sub Folder 1 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Jasons Keys\\Test Folder 2\\Test Sub Folder\\Test Sub Folder 2",
+                    "rootFolderId": 0,
+                    "folderId": "1015",
+                    "folderName": "Test Sub Folder 2",
+                    "parentFolderId": "1013",
+                    "folderLevel": 4,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Test Sub Folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Test Sub Folder 2 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Test Sub Folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Marketing\\Sub-Marketing 1",
+                    "rootFolderId": 0,
+                    "folderId": "1016",
+                    "folderName": "Sub-Marketing 1",
+                    "parentFolderId": "1006",
+                    "folderLevel": 3,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Sub-Marketing 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Sub-Marketing 1 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Marketing\\Sub-Marketing 2",
+                    "rootFolderId": 0,
+                    "folderId": "1017",
+                    "folderName": "Sub-Marketing 2",
+                    "parentFolderId": "1006",
+                    "folderLevel": 3,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Sub-Marketing 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Sub-Marketing 2 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\Marketing\\Sub-Marketing 3",
+                    "rootFolderId": 0,
+                    "folderId": "1018",
+                    "folderName": "Sub-Marketing 3",
+                    "parentFolderId": "1006",
+                    "folderLevel": 3,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My Sub-Marketing 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'Sub-Marketing 3 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My Sub-Marketing 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\VMworld test folder\\Sub-Sub-VMworld test folder 1",
+                    "rootFolderId": 0,
+                    "folderId": "1019",
+                    "folderName": "Sub-Sub-VMworld test folder 1",
+                    "parentFolderId": "1007",
+                    "folderLevel": 3,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My VMworld test folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'VMworld test folder 1 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 1 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\VMworld test folder\\Sub-Sub-VMworld test folder 2",
+                    "rootFolderId": 0,
+                    "folderId": "1020",
+                    "folderName": "Sub-Sub-VMworld test folder 2",
+                    "parentFolderId": "1007",
+                    "folderLevel": 3,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My VMworld test folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'VMworld test folder 2 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 2 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }, {
+                    "status": "ACTIVE",
+                    "folderType": "ORDER",
+                    "fullFolderPath": "HOME\\VMworld test folder\\Sub-Sub-VMworld test folder 3",
+                    "rootFolderId": 0,
+                    "folderId": "1021",
+                    "folderName": "Sub-Sub-VMworld test folder 3",
+                    "parentFolderId": "1007",
+                    "folderLevel": 3,
+                    "folderAccess": "VIEW",
+                    "isLeaf": true,
+                    "hasSubFolders": false,
+                    "folderOptions": [{
+                        "text": "Invite New User",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Share Folder",
+                        "disabledClass": "disabled"
+                    }, {
+                        "text": "Create Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Delete Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Rename Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Move Folder",
+                        "disabled": false
+                    }, {
+                        "text": "Request Permission",
+                        "disabled": false
+                    }, {
+                        "text": "Export to csv",
+                        "disabled": false
+                    }],
+                    "accessable": true,
+                    "checked": false,
+                    "content": [{
+                            "product": 'My VMworld test folder 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '3-Medium',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'VMworld test folder 3 vSphere ESXi 5.1',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '2-High',
+                            "lastUpdated": '2013-12-12'
+                        }, {
+                            "product": 'My VMworld test folder 3 Portal',
+                            "supportRequest": '434534534534',
+                            "status": 'Open',
+                            "severity": '4-Low',
+                            "lastUpdated": '2013-12-12'
+                        }
+
+                    ]
+                }
+
+            ]
+
+Root-name:
+Provide root-name information object here. This is mandatory, If not provided Tree will not be generated.
+Sample object :
+$scope.rootName = {
+            'value': '2',
+            'text': 'License Folders',
+            'disabled': false,
+            'checked': false
+        }
+
+Multiple-select:
+Provide multiple-select information String here. If this attribute is not provided folder tree will have multiple selection enabled by default.
+Sample object :
+$scope.multiOff = “off”
+$scope.multioff = “false”
+$scope.multioff = “on”
+
+folderClickCallBack:
+On Click call back function is provided to the user.
+METHODS:
+scope. calculatePadding ()
+This function provides padding and positioning of every level in folder tree dynamically.
+scope. lowestlevelGetter ()
+This function returns number of levels the folder tree has in it depending on the tree that is  passed as a attribute.
+scope. subFolderCreator ()
+This function requires parent Object. It iterates through tree and returns the same object with an array having its subfolders. At the same time deletes the folders already moved.
+scope. compiler ()
+This function requires tree array or updated tree array and generates folder tree HTML.
+scope.uniqueIDGenerator()
+Generates Unique folder Id for newly created folder. And also checks if Id is already present in the current Tree instance 
+
+scope.creatingFolder()
+This function requires Name of the folder to be created and also location where it should be created and returns a new folder Object.
+scope.resetFolders()
+This function is called whenever there is an operation performed on folder tree. Operations like Creating, renaming, deletion, moving can be performed on each folder.
+
+scope.folderStackUpdated()
+This function assigns updated folders array  to $scope.tree. which initiated  rendering of folder Tree again
+
+scope.getAllFolderPaths()
+This function requires updated folder array. It returns full paths of all the folders in a Array of strings. This array is used for dropdown 
+
+scope.find()
+This functions finds folders having the string entered in the search field in its name.
+
+scope.createOptions()
+This functions will be triggered form scope.find(). It created radio options after search is done.
+
+scope.folderActions()
+This function triggers resetFolders method with appropriate operatiosn to be perfrmed(creation, deletion,renaming, moving,find)
+
+this.createModal()
+This function creates appropriate modal overlay depending on the operation to be performed.
+
+$scope.foundElement()
+This method is triggered after required element is found and its selection and its highlighting is taken care by this method. 
+
+$scope.expander()
+Expanding and collapsing of folders having subfolders is taken care by this method.
+
+$scope.openMainOptions()
+Main menu is opened depending on the permissions to the folder clicked.
+
+$scope.mainOptionsAction()
+Actions to be performed after clicking main tree options is handled in this function.
+
+scope.showOptions()
+Folder level options are opened depending on the permissions to the folder clicked.
+
+scope.optionsAction()
+Actions to be performed after clicking folder level options is handled in this function.
+
+
+

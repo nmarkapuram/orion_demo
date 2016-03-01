@@ -1,0 +1,39 @@
+<div ng-controller="EstimatorTableController as tCtrl" style="border-bottom:1px solid #e6e6e6">
+        <table datatable="ng" dt-options="tCtrl.dtOptions" dt-column-defs="" class="ellipsisTable starlight dataTable estimatorTable">
+            <thead>
+                <tr>
+                    <th width="20%">
+                      <div class="checkbox">
+                        <input type="checkbox" id="allSKU" class="">
+                        <label for="allSKU" class="ng-binding">{{globalVars.sku}}</label>
+                      </div>
+                    </th>
+                    <th width="30%">{{globalVars.productName}}</th>
+                    <th width="15%">{{globalVars.discountEligible}}</th>
+                    <th width="10%">{{globalVars.quantity}}</th>
+                    <th width="15%">{{globalVars.totalPoints}}</th>
+                    <th width="10%">{{globalVars.discount}}</th>
+                </tr>
+            </thead>
+            <tbody ng-class="{'dataTableClass': (estimatorTableObject.cartDetails == null || estimatorTableObject.cartDetails.length == 0)}" >
+                <tr ng-repeat="item in estimatorTableObject.cartDetails">
+                    <td width="20%">
+                      <div class="checkbox">
+                        <input type="checkbox" id="{{item.licSKU}}" class="">
+                        <label for="{{item.licSKU}}" class="ng-binding">{{item.licSKU}}</label>
+                      </div>
+                    </td>
+                    <td width="30%">{{item.licSKUDesc}}</td>
+                    <td width="15%">No</td>
+                    <td width="10%">
+                      <div class="labelForm ng-binding" style="display:none;">200</div>
+                      <div class="editForm qtyText" style="display: block;">
+                        <input type="text" maxlength="5" ng-change="changeQty(itemCart)" ng-blur="validateQty(itemCart)" class="form-control text-left ng-valid ng-valid-pattern" data-ng-model="itemCart[0]" ng-pattern="/^[0-9]{1,9}$/">   
+                      </div>
+                    </td>
+                    <td width="15%">600</td>
+                    <td width="10%">21%</td>
+                </tr>
+            </tbody>
+        </table>
+</div>

@@ -1,0 +1,90 @@
+<section tabindex="-1" role="dialog" aria-labelledby="startHereModal" aria-hidden="true" class="overlay" id="startHereModal">
+    <div class="modal-header">
+        <div class = "row">  
+        <div class="col-md-11">
+            <h3 class="modal-title ng-binding">Start here</h3>
+        </div>
+         <div class="col-md-1">
+            <span class="close" data-dismiss="modal" aria-hidden="true" ng-click="modalClose('oran-search-results')"></span>
+        </div>
+        </div>
+    </div>
+    <div class="modal-body clearfix">
+        <div class="row" ng-if="startHereModalErrorMessage != null">
+           <div class="alert-box col-md-12 margin-top-10">
+                <div class="alert alert-danger alert-dismissable" role="alert">
+                    <span class="close icons-alert-close" data-dismiss="alert" aria-hidden="true"></span>
+                    <div class="row">
+                        <span class="icons-alert-info"></span>
+                        <div class="alert-text col-sm-10">
+                            <p>{{startHereModalErrorMessage}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+              You have the following estimates saved. Select one to edit or create a new one.
+            </div>
+        </div>
+        <div class="row margin-top-30">
+            <div class="col-md-12" id="oranSearchResultsTable">
+                <div ng-if="startHereModalSpinner" class="text-center margin-top-20">
+                    <div class="ajaxSpinner">&nbsp;</div>
+                </div>
+                <div ng-controller="startHereTableController as dCtrl" ng-if="!startHereModalSpinner && startHereModalErrorMessage == null">
+                    <table dt-options="dCtrl.dtOptions" dt-column-defs="" class="ellipsisTable starlight dataTable">
+                        <thead>
+                            <tr>
+                                <th width="25%">Estimate</th>
+                                <th width="20%" class="text-center">Last Saved Date</th>
+                                <th width="20%" class="text-center">Last Saved By</th>
+                                <th width="35%" class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         <tr>
+                            <td width="25%">ORAN-12345-56789</td>
+                            <td width="20%" class="text-center">12/25/15</td>
+                            <td width="20%" class="text-center">John Doe</td>
+                            <td width="35%" class="text-center">
+                                <a href="javascript:void(0);" class="btn btn-primary margin-right-0">Continue Editing</a>
+                            </td>
+                         </tr>
+                          <tr>
+                            <td width="25%">ORAN-12345-56789</td>
+                            <td width="20%" class="text-center">12/25/15</td>
+                            <td width="20%" class="text-center">John Doe</td>
+                            <td width="35%" class="text-center">
+                                <a href="javascript:void(0);" class="btn btn-primary margin-right-0">Continue Editing</a>
+                            </td>
+                         </tr>
+                          <tr>
+                            <td width="25%">ORAN-12345-56789</td>
+                            <td width="20%" class="text-center">12/25/15</td>
+                            <td width="20%" class="text-center">John Doe</td>
+                            <td width="35%" class="text-center">
+                                <a href="javascript:void(0);" class="btn btn-primary margin-right-0">Continue Editing</a>
+                            </td>
+                         </tr>
+                          <tr>
+                            <td width="25%">ORAN-12345-56789</td>
+                            <td width="20%" class="text-center">12/25/15</td>
+                            <td width="20%" class="text-center">John Doe</td>
+                            <td width="35%" class="text-center">
+                                <a href="javascript:void(0);" class="btn btn-primary margin-right-0">Continue Editing</a>
+                            </td>
+                         </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Content End -->
+    <div class="modal-footer clearfix">
+        <a href="javascript:void(0);" class="btn btn-primary margin-right-0" ng-click="close('oran-search-results')">Start A New Estimate</a>
+    </div>
+</section>

@@ -1,0 +1,266 @@
+<div class="modal fade vmf-folderModel vmf-modal">
+    <div class="modal-dialog row">
+        <div class="modal-content">
+            <form>
+	            <div class="modal-header">
+	                <a href="javascript:void(0)" class="closeIcon" aria-hidden="true" title="close" ng-click="closeModal()"></a>
+	                <h4 class="modal-title" id="myModalLabel">
+	                   {{globalVars.inviteUsersText}} 
+	                   <span ng-if="shareFolderStepOne == true">
+	                   		<!--span ng-if="modalData.operationScope.id == 'inviteNewUserInner'"> {{globalVars.toFolderAction}} "{{modalData.folders[0]['folderName']}}"</span-->
+	                   		<!--span ng-if="modalData.operationScope.id !== 'inviteNewUserInner'"> {{globalVars.enterUserInformationText}} </span-->
+	                   		<span> {{globalVars.enterUserInformationText}} </span>
+	                   	</span>
+	                   <span ng-if="shareFolderStepTwo == true"> {{globalVars.selectFoldersText}}</span>
+	                   <span ng-if="shareFolderStepThree == true"> {{globalVars.selectPermissionsText}}</span>
+	               </h4>
+	            </div>	
+				<div ng-show="ajaxLoader" class="ajaxLoader"></div>
+				<div ng-if="shareFolderErrorMsg.length >= 1" class="alert-box starlight-alert margin-left-40 margin-right-40 margin-top-20">  	  
+					<div class="alert alert-danger alert-dismissable"> 
+				        <a class="close icons-alert-close" data-dismiss="alert" type="button"></a>
+				        <div class="row"> 
+				            <span class="icons-alert-danger"></span> 
+
+				            <div class="alert-text col-sm-10"> 
+				                <span>{{shareFolderErrorMsg}}</span> 
+				            </div> 
+				        </div> 
+				    </div> 
+				</div>
+	            <div ng-show="shareFolderStepOne">
+	            	<div class="modal-body row" id="inviteUserStepOne">
+		            	<div class="bodyText col-md-12" ng-bind-html="globalVars.enterRequiredInfoDesc"></div>
+						<div class="productsContainer col-md-6">
+							<div class="productsContainerHeader">
+								{{globalVars.inviteNewUsers}}
+							</div>
+							<div class="productsContainerBody">
+								<div class="formElement clearfix">
+									<div class="col-md-4"></div>
+									<div class="col-md-8 labelValue">
+										<span class="requiredAsterisk">*</span>{{globalVars.requiredField}}
+									</div>
+								</div>
+								<div class="formElement clearfix">
+									<span class="label col-md-3">{{globalVars.emailField}}<span class="requiredAsterisk">*</span></span>
+									<div class="col-md-1"></div>
+									<div class="col-md-8 labelValue">
+										<input type="text" ng-model="localObj.txtEmail" />
+									</div>
+									<div ng-if="!emailValid" class="Invite_adduserError">{{globalVars.invalidEmailMsg}}</div>
+									<div ng-if="!dupEmailValid" class="Invite_adduserError">{{globalVars.duplicateEmailMsg}}</div>
+								</div>
+								<div class="formElement clearfix">
+									<span class="label col-md-3">{{globalVars.firstNameField}}<span class="requiredAsterisk">*</span></span>
+									<div class="col-md-1"></div>
+									<div class="col-md-8 labelValue">
+										<input type="text" ng-model="localObj.txtFName" />
+									</div>
+								</div>
+								<div class="formElement clearfix">
+									<span class="label col-md-3">{{globalVars.lastNameField}}<span class="requiredAsterisk">*</span></span>
+									<div class="col-md-1"></div>
+									<div class="col-md-8 labelValue">
+										<input type="text" ng-model="localObj.txtLName" />
+									</div>
+								</div>
+								<div>
+									<button type="button" class="vmf-btn vmf-primary pull-right" ng-disabled="localObj.txtEmail.length == 0 || localObj.txtFName.length == 0 || localObj.txtLName.length == 0" ng-class="{vmfdisabled: (localObj.txtEmail.length == 0 || localObj.txtFName.length == 0 || localObj.txtLName.length == 0)}" ng-click="InviteUsersAdd()">{{globalVars.addBtn}}</button>
+								</div>
+							</div>
+						</div>
+						<div class="productsContainer col-md-6" id="selectedUsersContainer">
+							<div class="productsContainerHeader" >
+								{{globalVars.selectedUsers}} ({{inviteUserArr.length}})
+							</div>
+							<div class="productsContainerBody">
+								<ul class="label clearfix">
+									<li class="col-md-5">{{globalVars.textName}}</li>
+									<li class="col-md-7">{{globalVars.textEmail}}</li>
+								</ul>
+								<ul class="tableHeader clearfix" ng-repeat="users in inviteUserArr">
+									<li class="col-md-5">{{users.fName}} {{users.lName}}</li>
+									<li class="col-md-5">{{users.email}}</li>
+									<li class="col-md-2"><a ng-click="removeInviteUser(users)" class="deleteIcon"></a></li>
+								</ul>
+							</div>
+						</div>
+		            </div>
+		            <div class="modal-footer">
+		            	<div class="leftButton">
+		            		<!-- <vmf-checkbox-group class="vmf-checkbox-group" name="shareMultipleFolders" type="1" c-disabled="inviteUserArr.length == 0" click-callback="shareFoldersStep2()"></vmf-checkbox-group> -->
+							<button type="button" class="vmf-btn vmf-primary" ng-class="{vmfdisabled: inviteUserArr.length == 0}" ng-disabled="inviteUserArr.length == 0" ng-click="shareFoldersStep2()">{{globalVars.inviteToMultipleFolders}}</button>
+		            		<!-- <span>{{globalVars.inviteToMultipleFolders}}</span> -->
+		            	</div>
+		            	<div class="rightButton">
+							<button type="button" class="vmf-btn vmf-primary" ng-class="{vmfdisabled: inviteUserArr.length == 0}" ng-disabled="inviteUserArr.length == 0" ng-click="inviteUserStep1Continue()">{{globalVars.textContinue}}</button>
+							<button type="button" class="vmf-btn vmf-secondary" ng-click="closeModal()">{{globalVars.textCancel}}</button>
+						</div>
+		            </div>
+		        </div>
+
+		        <div ng-show="shareFolderStepTwo">
+		            <div class="modal-body" id="inviteUserStepTwo">
+		            	<span class="bodyText">{{globalVars.giveFolderPermission}}</span>
+						<div class="productsContainer">
+							<div class="productsContainerHeader">
+								<span>{{globalVars.folderTxt}}</span>
+							</div>
+							<div class="productsContainerBody">
+								<div class="selectFolderTree" id="inviteUserFt">
+									<div ng-show="ftAjaxLoader" class="ajaxLoader">{{globalVars.textLoading}}</div>
+
+
+									<div class="folderTree ftError" ng-if="folderContent == undefined || emptyTree == true">
+								      <div class="folderTreeHeader">
+								         <a href="javascript:void(0)" class="libraryCheckbox">
+								            <label class=" ng-scope folderSelector">{{globalVars.licenseFolder}}</label>
+								         </a>
+								      </div>
+								      <div class="margin-top-10 margin-left-10">{{globalVars.txtFolderContentsNotAvailable}}</div>
+								    </div>
+
+									<div vmf-folder-tree ng-if="folderContent && emptyTree == false" tree="folderContent" root-name="popUpFolderRoot" ajax="true" multiple-select="on"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+		            <div class="modal-footer">
+		            	<div class="leftButton">
+		            		<button type="button" class="vmf-btn vmf-secondary" ng-click="shareFoldersStep1()">{{globalVars.textBack}}</button>
+		            	</div>
+		            	<div class="rightButton">
+							<button type="button" class="vmf-btn vmf-primary" ng-disabled="!folderSelFlag" ng-click="shareFoldersStep3()">{{globalVars.textContinue}}</button>
+							<button type="button" class="vmf-btn vmf-secondary" ng-click="closeModal()">{{globalVars.textCancel}}</button>
+						</div>
+		            </div>
+		        </div>
+
+		        <div ng-show="shareFolderStepThree">
+		            <div class="modal-body" id="inviteUserStepThree">
+		            	<span class="bodyText getEditAccessPermissions" ng-bind-html="to_trusted(editAccessPermissionsMsg)"></span>
+		            	<div class="bodyContainer clearfix">
+		            			<div class="col-md-7"></div>
+		            			<div class="col-md-5 adminChkboxWrap" ng-hide="hideAdmin">
+									<vmf-checkbox-group class="vmf-checkbox-group" name="administratorCheckbox" c-label="Administrator" type="1" model="localObj.adminCheck" change-callback="changeAdminFn()"></vmf-checkbox-group>
+		            				<span>{{globalVars.textAdministrator}} <span class="infoIcon" data-container="body" data-toggle="popover" data-placement="right" data-original-title=""></span></span>
+		            			</div>
+		            		</div>
+		            	<div class="productsContainer">
+		            		<div class="productsContainerHeader clearfix">
+		            			<ul class="clearfix">
+		            				<li class="col-md-7 permDescription">{{globalVars.textAccess}}</li>
+		            				<li class="col-md-5 permDescription borderLeft">{{globalVars.textAllowed}}</li>
+		            			</ul>
+		            		</div>
+		            		<div class="productsContainerBody padding_0">
+			            		<div class="selectPermissionsDatatable">
+									<ul>
+										<li ng-repeat="(key,val) in getFolderPermissions" class="clearfix">
+											<div class="col-md-7 permDescription {{val.permissionCode}}">{{val.description}}</div>
+											<div class="col-md-5 permInput">
+												<vmf-checkbox-group change-callback="permissionChange(val)" class="vmf-checkbox-group" name="administratorCheckbox" type="1" model="val.checked" c-disabled="val.disabled"></vmf-checkbox-group>
+												<span ng-show="val.disabled == true" title="{{globalVars.txtCannotEditPerm}}" class="icon_lock_grey margin_bottom_n2"></span>
+											</div>
+										</li>
+									</ul>
+			            		</div>
+			            	</div>
+		            	</div>
+		            </div>
+		            <div class="modal-footer">
+		            	<div class="leftButton">
+		            		<button type="button" class="vmf-btn vmf-secondary" ng-click="inviteUserStep3Back()">{{globalVars.textBack}}</button>
+		            	</div>
+		            	<div class="rightButton">
+							<button type="button" class="vmf-btn vmf-primary"  ng-click="shareFoldersStep4('invite')">{{globalVars.textContinue}}</button>
+							<button type="button" class="vmf-btn vmf-secondary" ng-click="closeModal()">{{globalVars.textCancel}}</button>
+						</div>
+		            </div>
+	            </div>
+
+	            <div ng-show="selectPermWarning">
+	            	<div class="modal-body" id="selectPermWarning">
+	            		<span></span>
+						<p>{{globalVars.assigningPermission}}</p>
+						<p class="margin-top-20">{{globalVars.verifyLicenseQty}}</p>
+					</div>
+
+
+
+					 <div class="modal-footer">
+		            	<div class="rightButton">
+							<button type="button" class="vmf-btn vmf-primary"  ng-click="permissionChangeOk()">{{globalVars.okBtn}}</button>
+						</div>
+		            </div>
+	            </div>
+
+	            <div ng-show="shareFolderStepFour">
+		            <div class="modal-body" id="inviteUserStepFour">
+		            	<span class="bodyText">{{globalVars.addSelectedUsers}}</span>
+		            	<div class="productsContainer row">
+		            		<div class="col-md-4">
+		            			<div class="productsContainerHeader">{{globalVars.selectedUsers}}</div>
+		            			<div class="productsContainerBody">
+		            				<div class="selectedUsersContainer">
+		            					<div class="fbold">{{globalVars.txtInvitedUsers}}</div>
+		            					<ul>
+			            					<li ng-repeat="users in userAddedData.invitedUserList">
+												<span class="name">{{users.firstName}} {{users.lastName}}</span>
+												<span class="email">{{users.email}}</span>
+											</li>
+										</ul>
+		            				</div>
+		            				<div class="selectedUsersMsg">
+		            					{{globalVars.selectedUsersMsg}}
+		            				</div>
+		            			</div>
+		            		</div>
+		            		<div class="col-md-4">
+		            			<div class="productsContainerHeader">{{globalVars.selectedFolders}}</div>
+		            			<div class="productsContainerBody padding_0">
+		            				<div class="selectedFoldersContainer">
+		            					<ul>
+		            						<li ng-repeat="folders in getSelectedFolders">
+		            							<div class="fldrName">{{folders.folderName}}</div>
+		            							<div class="fldrPath">{{folders.fullFolderPath}}</div>
+		            						</li>
+		            					</ul>
+		            				</div>
+		            			</div>
+		            		</div>
+		            		<div class="col-md-4">
+		            			<div class="productsContainerHeader">{{globalVars.permissions}}</div>
+		            			<div class="productsContainerBody">
+		            				<div class="permissionsContainer">
+		            					<ul>
+		            						<li ng-repeat="folderPerms in getFolderPermissions">
+		            							<div class="clearfix">
+		            								<span class="description" title="{{folderPerms.description}}">{{folderPerms.description}}</span>
+													<span ng-if="folderPerms.checked == false" class="f_right icon_lock_grey margin_bottom_n2"></span>
+													<span ng-if="folderPerms.checked == true" class="f_right optSelected"></span>
+													<span ng-if="folderPerms.checked == false" class="f_right optNotSelected"></span>
+		            							</div>
+		            						</li>
+		            					</ul>
+		            				</div>
+		            			</div>
+		            		</div>
+		            	</div>
+		            </div>
+		            <div class="modal-footer">
+		            	<div class="leftButton">
+		            		<button type="button" class="vmf-btn vmf-secondary" ng-click="shareFoldersStep3()">{{globalVars.textBack}}</button>
+		            	</div>
+		            	<div class="rightButton">
+							<button type="button" class="vmf-btn vmf-primary" ng-click="confirmFolderShare()">{{globalVars.textConfirm}}</button>
+							<button type="button" class="vmf-btn vmf-secondary" ng-click="closeModal()">{{globalVars.textCancel}}</button>
+						</div>
+		            </div>
+		        </div>
+
+            </form>
+        </div>
+    </div>
+</div>

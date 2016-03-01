@@ -1,0 +1,8 @@
+vmf-radio-group label span input{ _noFocusLine: expression(this.hideFocus=true); -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); -khtml-opacity: 0; -moz-opacity: 0; opacity: 0; outline: none; position: absolute; }
+vmf-radio-group label span { width: 24px; height: 24px; display: inline-block; position: relative; z-index: 1; top: 5px; margin-right: 4px; background: url("../images/input_checks_new.png") no-repeat bottom left;   }   
+vmf-radio-group label span.selected { background-position: 0 -76px; }
+vmf-radio-group label span.disabled { background-position: top left; }
+vmf-radio-group label.disabledColor span.selected {  background: url("../images/input_checks_new.png") no-repeat -189px 0px;}
+
+vmf-radio-group .labelHeader.col-md-2{  *float:left!important;  float:left\9; *margin-top:12px; }
+vmf-radio-group .col-md-8{ float:left\9; }

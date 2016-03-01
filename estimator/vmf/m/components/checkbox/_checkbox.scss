@@ -1,0 +1,79 @@
+//colors
+$white: #fff;
+$charcoal: #666;
+$grey: #333;
+$charcoal_light: #ccc;
+$charcoal_light2: #999;
+
+//fonts
+$font_0: icon;
+
+.checkbox {
+    padding-left: 20px;
+    label {
+        vertical-align: middle;
+        position: relative;
+        padding-left: 5px;
+        outline:0;
+        color:$grey;
+    }
+    label::before {
+        position: absolute;
+        outline: 0;
+        font-family: $font_0;
+        content: "\e107";
+        color:#666;
+        font-size: 1rm;
+        outline:0;
+        left: 0;
+        top: 0;
+        margin-left: -20px;
+        //Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+        transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    }
+    label::after {
+        display: inline-block;
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        left: 0;
+        top: 0;
+        margin-left: -20px;
+        padding-left: 3px;
+        padding-top: 1px;
+        font-size: 1rm;
+    }
+    input[type="checkbox"] {
+        opacity: 0;
+        z-index: 1;
+        &:focus + label::before {
+            outline: thin dotted;
+            outline-offset: -2px;
+            outline: 0;
+        }      
+        &:disabled + {
+            label {
+                color: $charcoal_light2;
+            }
+        }
+        &:checked + label{
+            color: $grey;
+        }
+        &:checked + label::before {
+            font-family: $font_0;
+            content: "\e106";
+            font-size: 1rm;
+            outline: 0;
+        }
+        &:disabled + {
+            label::before {
+                cursor: not-allowed;
+                color: $charcoal_light;
+            }
+            label::after {
+                cursor: not-allowed; 
+                color: $charcoal_light;
+            }
+        }
+    }
+}

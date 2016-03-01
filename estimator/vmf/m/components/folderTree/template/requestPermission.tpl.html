@@ -1,0 +1,180 @@
+<div class="modal fade vmf-folderModel vmf-modal">
+    <div class="modal-dialog row">
+        <div class="modal-content" id="reqPermWrapper">
+            <form>
+	            <div class="modal-header">
+	                <a href="javascript:void(0)" class="closeIcon" title="close" aria-hidden="true" ng-click="closeModal()"></a>
+	                <h4 class="modal-title" id="myModalLabel">
+	                   {{globalVars.requestPer}}
+	               </h4>
+	            </div>	
+	            <div ng-show="ajaxLoader" class="ajaxLoader"></div>
+		        <div ng-show="editPermissionStep1" id="editPermissionStep1">
+		            <div class="modal-body requestPermissionsWrap">
+		            		<div ng-if="getPermissionErrorMsg.length >= 1">
+		            			<div  class="alert-box starlight-alert">
+		            				<div class="alert alert-danger alert-dismissable"> 
+                                        <a class="close icons-alert-close" data-dismiss="alert" type="button"></a>
+                                        <div class="row"> 
+                                            <span class="icons-alert-danger"></span>
+                                            <div class="alert-text col-sm-10"> 
+                                                <span>{{getPermissionErrorMsg}}</span>
+                                            </div> 
+                                        </div> 
+                                    </div> 
+                                </div>		            			
+		            		</div>
+			            	<!--span class="bodyText"  ng-bind-html="renderHTML(globalVars.editAccessPermissions)"></span-->
+			            	<div class="bodyContainer clearfix">
+			            			<div class="col-md-7">
+			            				<div class="reqFolderName"><strong>{{globalVars.folder}}</strong> : <span class="vmf-tooltip" data-toggle="tooltip" data-placement="right" title="{{modalData.folders[0]['folderName']}}">{{modalData.folders[0]['folderName']}}</span> </div>
+			            			</div>
+			            			<div class="col-md-5 adminChkboxWrap" ng-hide="hideAdmin">
+										<vmf-checkbox-group class="vmf-checkbox-group" name="administratorCheckbox" c-label="Administrator" type="1" model="localObj.adminCheckPerm" change-callback="changeAdminFnEdit()"></vmf-checkbox-group>
+			            				<span>{{globalVars.textAdministrator}}</span>
+			            			</div>			            			
+			            		</div>
+			            	<div class="productsContainer">
+			            		<div class="productsContainerHeader clearfix">
+			            			<ul class="clearfix">
+			            				<li class="col-md-7 permDescription ">{{globalVars.textAccess}}</li>
+			            				<li class="col-md-5 permDescription borderLeft">{{globalVars.textAllowed}}</li>
+			            			</ul>
+			            		</div>
+			            		<div class="productsContainerBody padding_0 margin_bottom_10">
+									<div class="selectPermissionsDatatable">
+										<ul>
+
+											<li ng-repeat="(key,val) in getFolderPermissions.permissionPaneContents" class="clearfix">
+												<div class="col-md-7 permDescription {{val.permissionCode}}">{{val.permissionName}}</div>
+												
+												<div class="col-md-5 permInput">
+													<div ng-if="!val.isLoggedInUserCanEdit">
+														<div ng-if="val.isSet">
+															<vmf-checkbox-group class="vmf-checkbox-group" name="administratorCheckbox" type="1" model="val.isSet" c-disabled="true"></vmf-checkbox-group>
+															<span title="{{globalVars.cannotChangePermText}}" class="icon_lock_grey margin_bottom_n2"></span>
+														</div>
+
+														<div ng-if="!val.isSet">
+															<vmf-checkbox-group class="vmf-checkbox-group" name="administratorCheckbox" type="1" model="val.checked" change-callback="permissionChangeEdit(val)" c-disabled="val.disabled"></vmf-checkbox-group>
+														</div>
+													</div>
+
+													<div ng-if="val.isLoggedInUserCanEdit">
+														<vmf-checkbox-group class="vmf-checkbox-group" name="administratorCheckbox" type="1" model="val.checked" change-callback="permissionChangeEdit(val)" c-disabled="val.disabled"></vmf-checkbox-group>
+													</div>
+												</div>
+
+											</li>
+										</ul>
+				            		</div>				            		
+				            	</div>
+				            	<div>
+				            			<div>{{globalVars.txtNote}}:</div>
+				            			<textarea ng-model="getPermissionNote" class="margin_top_10"></textarea>
+				            		</div>
+			            	</div>
+		            </div>
+		            <div class="modal-footer">
+		            	<div class="rightButton">
+							<button type="button" class="vmf-btn vmf-primary" ng-disabled="!permEditDataChanged"  ng-click="goToEditPermStep2()">{{globalVars.textContinue}}</button>
+							<button type="button" class="vmf-btn vmf-secondary" ng-click="closeModal()">{{globalVars.textCancel}}</button>
+						</div>
+		            </div>
+	            </div>
+	             <div ng-show="editPermissionStep2" id="editPermissionStep2">
+		            <div class="modal-body requestPermissionsWrap">
+		            	<div ng-if="getPermissionUserErrorMsg.length >= 1 || submitPermissionErrorMsg.length >= 1">
+	            			<div  class="alert-box starlight-alert">
+	            				<div class="alert alert-danger alert-dismissable"> 
+                                    <a class="close icons-alert-close" data-dismiss="alert" type="button"></a>
+                                    <div class="row"> 
+                                        <span class="icons-alert-danger"></span>
+                                        <div class="alert-text col-sm-10">
+                                            <span ng-if="getPermissionUserErrorMsg.length >= 1">{{getPermissionUserErrorMsg}}</span>
+                                            <span ng-if="submitPermissionErrorMsg.length >= 1">{{submitPermissionErrorMsg}}</span>
+                                        </div> 
+                                    </div> 
+                                </div> 
+                            </div>		            			
+		            	</div>
+		            	<!--span class="bodyText" ng-bind-html="globalVars.editAccessPermissions"></span-->
+		            	<div class="bodyContainer clearfix">
+		            			<div class="col-md-7">
+		            				<div class="reqFolderName">
+			            				<div class="reqFolderName"><strong>{{globalVars.folder}}</strong> : <span class="vmf-tooltip" data-toggle="tooltip" data-placement="right" title="{{modalData.folders[0]['folderName']}}">{{modalData.folders[0]['folderName']}}</span> </div>
+			            				<div class="margin_top_10">
+			            					<span class="vmf-tooltip" data-toggle="tooltip" data-placement="right" title="{{globalVars.requestWillbeSentMsg}}"><strong>{{globalVars.approvers}} </strong></span>
+			            					<span ng-repeat="approver in getApprovalList">
+			            						{{approver.firstName}} {{approver.lastName}} 
+			            						<span ng-if="!$last"> ,</span>
+			            					</span>
+			            				</div>
+			            				<div class="margin_top_10">
+			            					{{globalVars.txtPermApproval}}
+			            				</div>
+		            				</div>
+		            			</div>
+		            			<div class="col-md-5 adminChkboxWrap" ng-hide="hideAdmin">
+									<vmf-checkbox-group class="vmf-checkbox-group" name="administratorCheckbox" c-label="Administrator" c-disabled="true" type="1" model="localObj.adminCheckPerm" change-callback="changeAdminFnEdit()"></vmf-checkbox-group>
+		            				<span>{{globalVars.textAdministrator}}</span>
+		            			</div>
+		            			
+		            		</div>
+		            	<div class="productsContainer">
+		            		<div class="productsContainerHeader clearfix">
+		            			<ul class="clearfix">
+		            				<li class="col-md-7 permDescription">{{globalVars.textAccess}}</li>
+		            				<li class="col-md-5 permDescription borderLeft">{{globalVars.textAllowed}}</li>
+		            			</ul>
+		            		</div>
+		            		<div class="productsContainerBody padding_0 margin_bottom_10">
+								<div class="selectPermissionsDatatable">
+									<ul>
+										<li ng-repeat="(key,val) in getFolderPermissions.permissionPaneContents" class="clearfix">
+											<div class="col-md-7 permDescription {{val.permissionCode}}">{{val.permissionName}}</div>
+											<div class="col-md-5 permInput" ng-if="!val.isLoggedInUserCanEdit && val.isSet">
+												<vmf-checkbox-group class="vmf-checkbox-group" name="administratorCheckbox" type="1" model="val.isSet" c-disabled="true"></vmf-checkbox-group>
+												<span ng-if="!val.isLoggedInUserCanEdit && val.isSet" title="{{globalVars.cannotChangePermText}}" class="icon_lock_grey margin_bottom_n2"></span>
+												<span class="tooltip" ng-if="!val.isLoggedInUserCanEdit && val.isSet">some tooltip</span>
+											</div>
+											<div class="col-md-5 permInput canEdit" ng-if="!val.isLoggedInUserCanEdit && !val.isSet">
+												<vmf-checkbox-group class="vmf-checkbox-group" change-callback="permissionChangeEdit(val)" name="administratorCheckbox" type="1" model="val.checked" c-disabled="true"></vmf-checkbox-group>
+											</div>
+										</li>
+									</ul>
+			            		</div>
+			            	</div>
+			            	<div>
+		            			<div>{{globalVars.txtNote}}:</div>
+		            			<textarea ng-model="getPermissionNote" disabled="true" class="margin_top_10"></textarea>
+		            		</div>
+		            	</div>
+		            </div>
+		            <div class="modal-footer">
+		            	<div class="leftButton">
+		            		<button type="button" class="vmf-btn vmf-secondary" ng-click="goToEditPermStep1()">{{globalVars.textBack}}</button>
+		            	</div>
+		            	<div class="rightButton">
+							<button type="button" class="vmf-btn vmf-primary" ng-disabled="ajaxLoader"  ng-click="reqPermSubmit()">{{globalVars.txtSubmitRequest}}</button>
+							<button type="button" class="vmf-btn vmf-secondary" ng-click="closeModal()">{{globalVars.textCancel}}</button>
+						</div>
+		            </div>
+	            </div>
+	            <div ng-show="selectPermWarningEdit">
+	            	<div class="modal-body" id="selectPermWarning">
+	            		<span></span>
+						<p>{{globalVars.assigningPermission}}</p>
+						<p class="margin-top-20">{{globalVars.verifyLicenseQty}}</p>
+					</div>
+					 <div class="modal-footer">
+		            	<div class="rightButton">
+							<button type="button" class="vmf-btn vmf-primary"  ng-click="permissionChangeOk()">{{globalVars.okBtn}}</button>
+						</div>
+		            </div>
+	            </div>
+
+            </form>
+        </div>
+    </div>
+</div>

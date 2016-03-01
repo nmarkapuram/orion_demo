@@ -1,0 +1,11 @@
+/* VMware Globals */
+@import "../modal/_modal.scss";
+@import "../modal/_modal_ie7.scss";
+@import "../modal/_modal_ie8.scss";
+
+.vmf-breadcrumb {
+	margin-left: 0px;
+	ul {
+	  padding-left: 0px;
+	}
+}

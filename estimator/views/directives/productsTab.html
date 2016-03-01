@@ -1,0 +1,47 @@
+<section>
+    <div class="row">
+      <div class="col-md-12 productSearch margin-top-20">
+        <div class="row search_upgrade_style">
+          <div class="col-md-12">
+            <div class="input-group typeahead">
+              <input type="text" class="form-control" ng-click="onFocus($event)" ng-trim="false" placeholder="{{globalVars.filterProducts}}" ng-model="prdctFmlySlctd" empty-typeahead typeahead="productFamily as productFamily.name for productFamily in productFamilies.productFamily | filter:$viewValue:productComparator" typeahead-on-select="onProductFmlySelect($label)" ng-keypress="($event.which === 13)?onProductFmlySelect(prdctFmlySlctd):return;">
+              <span class="input-group-btn">
+                <a class="btn btn-primary" type="button" ng-click="onProductFmlySelect(prdctFmlySlctd)"><span class="glyphicon glyphicon-search"></span></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+   <div class="folderTreeWrapper withoutCheckBox margin-top-10">
+    <div class="folderTree">
+      <div class="row">
+          <div class="col-md-12">
+            <ul class="foldertreeUl">
+              <li class="expandButton" ng-repeat="product in productFamilies.productFamily" ng-class="{'plus':!showProdLine,'minus':showProdLine}" ng-click="showProdLine = !showProdLine;">
+                <a href="javascript:void(0);">
+                  <span class="expandCollapseIcon">&nbsp;</span>
+                  <div style="margin-left:40px;" class="disabledColor folderSelector">{{product.code}}</div>
+                </a>
+              <ul class="subfolder" ng-if="showProdLine" ng-click="$event.stopPropagation();">
+                 <li class="expandButton plus" ng-repeat="prodLine in product.productLine" ng-class="{'plus':!showProdDetail,'minus':showProdDetail}" ng-click="showProdDetail = !showProdDetail">
+                  <a href="javascript:void(0);" class="padding-left-20">
+                    <span class="expandCollapseIcon margin-left-20">&nbsp;</span>
+                     <div style="margin-left:40px;" class="disabledColor folderSelector"> {{prodLine.code}}</div>
+                  </a>
+                  <ul class="subfolder" ng-if="showProdDetail" ng-click="$event.stopPropagation();">
+                     <li ng-repeat="prodDetail in prodLine.productDetails">
+                     <a href="javascript:void(0);" class="padding-left-20" ng-click="selectProduct(prodDetail)"> 
+                        <div style="margin-left:40px;" class="disabledColor folderSelector"> {{prodDetail.licSKUDesc}}</div>
+                      </a>
+                     </li>
+                  </ul>
+                 </li>
+              </ul>
+               </li>
+            </ul>    
+        </div>               
+      </div>
+     </div> 
+  </div>
+</section> 

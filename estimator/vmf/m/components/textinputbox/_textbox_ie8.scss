@@ -1,0 +1,27 @@
+input[type="text"],
+input[type="password"],
+textarea {
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+.vmf-text-input .searchArea li {
+    height: 25px;
+    line-height: 0px;
+}
+.searchWrap {
+    li {
+        a {
+            span {
+                font-weight: bold;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.shortDesc {
+    top:auto;  
+    bottom:0;
+    position: absolute;
+}

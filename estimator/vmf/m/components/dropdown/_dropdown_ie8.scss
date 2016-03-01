@@ -1,0 +1,22 @@
+.ie8{
+.vmf-dropdown-content{
+    float:left;
+    border: 1px solid $vmf-dropdown-border;
+    ul {
+        border: 1px solid $vmf-dropdown-border;
+        top: 28px;
+        left: -1px;
+    }
+}
+.vmf-dropdown-content {
+    span {
+        font-size:14px;        
+    }
+   
+   /* li{
+        padding:0px 15px 0px 0px;
+        font-size:14px; 
+    }*/
+    
+}
+}
