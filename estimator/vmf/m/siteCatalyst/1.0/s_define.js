@@ -1,1 +1,0 @@
-vmf.ns.use("siteCly");
